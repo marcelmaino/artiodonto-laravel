@@ -18,10 +18,15 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          # Verificar se o repositório existe, senão clona
+          # Verificar se o repositório Git existe
           if [ ! -d ".git" ]; then
-            echo "Clonando repositório..."
-            git clone https://github.com/marcelmaino/artiodonto-laravel.git .
+            echo "Inicializando repositório Git..."
+            # Limpar pasta e clonar
+            rm -rf * .*git* 2>/dev/null || true
+            git clone https://github.com/marcelmaino/artiodonto-laravel.git temp_repo
+            mv temp_repo/* . 2>/dev/null || true
+            mv temp_repo/.* . 2>/dev/null || true
+            rm -rf temp_repo
           else
             echo "Atualizando repositório..."
             git pull origin main
