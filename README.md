@@ -70,5 +70,12 @@ Para informações detalhadas, consulte: [DOCUMENTACAO.md](DOCUMENTACAO.md)
 
 ---
 
+## 🚀 Deploy Automático
+
+✅ **GitHub**: https://github.com/marcelmaino/artiodonto-laravel  
+✅ **Deploy Automático**: Configurado via GitHub Actions  
+✅ **Hospedagem**: Umbler  
+
 **Status**: ✅ Funcionando  
-**Última atualização**: 07/08/2025
+**Última atualização**: 13/08/2025  
+**Teste Deploy**: ✅ Testando deploy automático...
