@@ -18,8 +18,15 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          cd ~/
-          git pull origin main
+          # Verificar se o repositório existe, senão clona
+          if [ ! -d ".git" ]; then
+            echo "Clonando repositório..."
+            git clone https://github.com/marcelmaino/artiodonto-laravel.git .
+          else
+            echo "Atualizando repositório..."
+            git pull origin main
+          fi
+          
           # Executar comandos Laravel se necessário
           # php artisan config:cache
           # php artisan route:cache
