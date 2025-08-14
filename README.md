@@ -1,81 +1,43 @@
-# 🦷 Arti Odonto - Site da Clínica
+# Astro Starter Kit: Minimal
 
-Site estático desenvolvido em Laravel 12 com Tailwind CSS 4.0 para a clínica odontológica Arti Odonto.
-
-## 🚀 Início Rápido
-
-### Opção 1: Script Automático (Recomendado)
-```bash
-# Windows
-start-project.bat
-
-# Linux/Mac
-./start-project.sh
+```sh
+npm create astro@latest -- --template minimal
 ```
 
-### Opção 2: Comandos Manuais
-```bash
-# 1. Iniciar containers
-docker-compose up -d
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-# 2. Instalar dependências
-docker-compose exec app composer install
+## 🚀 Project Structure
 
-# 3. Configurar Laravel
-docker-compose exec app php artisan key:generate
-docker-compose exec app php artisan config:clear
+Inside of your Astro project, you'll see the following folders and files:
 
-# 4. Acessar o site
-# http://localhost
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
 ```
 
-## 📄 Páginas Disponíveis
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-- **Home**: http://localhost
-- **A Clínica**: http://localhost/a-clinica
-- **Procedimentos**: http://localhost/procedimentos
-- **Arti Kids**: http://localhost/arti-kids
-- **Contato**: http://localhost/contato
-- **Obrigado**: http://localhost/obrigado
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-## 🛑 Parar o Projeto
+Any static assets, like images, can be placed in the `public/` directory.
 
-```bash
-# Script automático
-stop-project.bat
+## 🧞 Commands
 
-# Ou comando manual
-docker-compose down
-```
+All commands are run from the root of the project, from a terminal:
 
-## 📋 Funcionalidades
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-✅ **Menu Adicional**: Aparece no scroll  
-✅ **Menu Interno**: Apenas nas páginas internas  
-✅ **Slider de Fundo**: Automático na home  
-✅ **Responsivo**: Mobile-first design  
-✅ **Site Estático**: Sem banco de dados  
+## 👀 Want to learn more?
 
-## 📖 Documentação Completa
-
-Para informações detalhadas, consulte: [DOCUMENTACAO.md](DOCUMENTACAO.md)
-
-## 🛠️ Tecnologias
-
-- Laravel 12
-- Tailwind CSS 4.0
-- Docker & Docker Compose
-- Nginx
-- PHP 8.2
-
----
-
-## 🚀 Deploy Automático
-
-✅ **GitHub**: https://github.com/marcelmaino/artiodonto-laravel  
-✅ **Deploy Automático**: Configurado via GitHub Actions  
-✅ **Hospedagem**: Umbler  
-
-**Status**: ✅ Funcionando  
-**Última atualização**: 13/08/2025  
-**Teste Deploy**: 🚀 Deploy automático configurado e funcionando!
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

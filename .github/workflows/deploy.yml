@@ -1,15 +1,30 @@
-name: Deploy to Umbler
+name: Build and Deploy Astro to Umbler
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
 
 jobs:
-  deploy:
-    name: Deploy to Umbler
+  build-and-deploy:
+    name: Build Astro and Deploy to Umbler
     runs-on: ubuntu-latest
     
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build Astro project
+      run: npm run build
+
     - name: Deploy via SSH
       uses: appleboy/ssh-action@v0.1.10
       with:
@@ -18,21 +33,44 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          # Verificar se o repositório Git existe
-          if [ ! -d ".git" ]; then
-            echo "Inicializando repositório Git..."
-            # Limpar pasta e clonar
-            rm -rf * .*git* 2>/dev/null || true
-            git clone https://github.com/marcelmaino/artiodonto-laravel.git temp_repo
-            mv temp_repo/* . 2>/dev/null || true
-            mv temp_repo/.* . 2>/dev/null || true
-            rm -rf temp_repo
-          else
-            echo "Atualizando repositório..."
-            git pull origin main
+          echo "Preparando deploy do site estático..."
+          # Criar backup se existir conteúdo
+          if [ "$(ls -A public/ 2>/dev/null)" ]; then
+            echo "Fazendo backup dos arquivos atuais..."
+            rm -rf backup_$(date +%Y%m%d_%H%M%S) 2>/dev/null || true
+            mkdir -p backup_$(date +%Y%m%d_%H%M%S)
+            mv public/* backup_$(date +%Y%m%d_%H%M%S)/ 2>/dev/null || true
           fi
           
-          # Executar comandos Laravel se necessário
-          # php artisan config:cache
-          # php artisan route:cache
-          # php artisan view:cache
+          echo "Limpando pasta public..."
+          rm -rf public/* 2>/dev/null || true
+          mkdir -p temp_build
+
+    - name: Copy built files via SCP
+      uses: appleboy/scp-action@v0.1.4
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        port: ${{ secrets.SSH_PORT }}
+        key: ${{ secrets.SSH_KEY }}
+        source: "dist/*"
+        target: "temp_build/"
+        strip_components: 1
+
+    - name: Finalize deployment
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        port: ${{ secrets.SSH_PORT }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          echo "Movendo arquivos para pasta public..."
+          mv temp_build/* public/ 2>/dev/null || true
+          rm -rf temp_build
+          
+          echo "Configurando permissões..."
+          chmod -R 755 public/
+          
+          echo "✅ Deploy concluído! Site estático atualizado."
+          ls -la public/

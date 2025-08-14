@@ -1,22 +1,23 @@
 # Claude.md - Instruções para Deploy
 
-## 🚀 Deploy Automático Configurado na Umbler
+## 🚀 Deploy Automático Astro Configurado na Umbler
 
-Este projeto tem **deploy automático** configurado via **GitHub Actions** para a hospedagem **Umbler**.
+Este projeto foi **migrado para Astro** e tem **deploy automático** configurado via **GitHub Actions** para a hospedagem **Umbler**.
 
 ### ✅ Status do Deploy
 - **Repositório**: https://github.com/marcelmaino/artiodonto-laravel
+- **Tecnologia**: Astro (Site Estático)
 - **Hospedagem**: Umbler
 - **Deploy**: Automático via GitHub Actions
-- **Última configuração**: 13/08/2025
-- **Status**: ✅ Funcionando
+- **Última configuração**: 14/08/2025
+- **Status**: ✅ Migrado e Funcionando
 
 ### 🔧 Como Funciona
 
 1. **Trigger**: Qualquer push na branch `main`
-2. **GitHub Action**: `.github/workflows/deploy.yml`
-3. **SSH**: Conecta na Umbler via chaves SSH
-4. **Deploy**: Clona/atualiza o repositório automaticamente
+2. **Build**: GitHub Actions executa `npm run build` do Astro
+3. **Deploy**: Copia arquivos estáticos (pasta `dist/`) para Umbler via SCP
+4. **Resultado**: Site HTML/CSS/JS otimizado sem servidor backend
 
 ### 🔑 Configuração SSH
 
