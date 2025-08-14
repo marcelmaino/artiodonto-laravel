@@ -4,7 +4,8 @@
       "WebFetch(domain:help.umbler.com)",
       "Bash(npm create:*)",
       "Bash(cp:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(npm run build:*)"
     ],
     "deny": [],
     "defaultMode": "acceptEdits"
