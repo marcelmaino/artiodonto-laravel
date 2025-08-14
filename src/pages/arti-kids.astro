@@ -4,11 +4,254 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Arti Kids - Arti Odonto" description="Odontopediatria especializada para crianças" isInternalPage={true}>
 
-<section class="py-20 bg-gray-50">
-    <div class="container mx-auto text-center">
-        <h1 class="text-4xl font-bold text-teal-600 mb-4">Arti Kids</h1>
-        <p class="text-gray-600">Página em construção - Será migrada do Laravel original.</p>
-    </div>
-</section>
+  <!-- Hero Section -->
+  <section class="relative bg-[url('/images/fundo-titulo-clinica.jpg')] bg-cover bg-center text-white">
+    <div class="absolute w-full h-full bg-teal-800/90"></div>
+     <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+         <div class="text-center">
+             <h1 class="text-3xl md:text-5xl font-bold mb-6">
+                 Arti Kids
+             </h1>
+             <p class="text-lg text-teal-100 max-w-3xl mx-auto">
+                 Cuidados especiais para os pequenos com ambiente lúdico e tratamentos preventivos para um sorriso saudável desde cedo.
+             </p>
+         </div>
+     </div>
+ </section>
+
+<!-- Urso Parallax -->
+<div 
+ style="position: absolute; top: 350px; left: 0; z-index: 50; pointer-events: none; user-select: none; width: 9rem; height: auto;"
+ id="urso-parallax-wrapper"
+>
+ <img 
+     src="/images/dente.png" 
+     alt="Dente decorativo" 
+     id="urso-parallax"
+     style="display: block;"
+     class="w-24 md:w-full h-auto"
+ >
+</div>
+
+
+<script>
+ // Garantir que o JS rode após o DOM estar pronto
+ window.addEventListener('DOMContentLoaded', function() {
+     const urso = document.getElementById('urso-parallax');
+     const wrapper = document.getElementById('urso-parallax-wrapper');
+     
+     // Verifica se os elementos existem antes de prosseguir
+     if (!urso || !wrapper) {
+         console.warn('Elementos de parallax não encontrados');
+         return;
+     }
+     
+     let lastScrollY = window.scrollY || window.pageYOffset;
+
+     function parallaxUrso() {
+         // Fator de parallax ajustável
+         const fator = 0.4;
+         const scrollY = window.scrollY || window.pageYOffset;
+         // Aplica o translateY no wrapper para evitar conflitos de CSS inline do Tailwind
+         if (wrapper) {
+             wrapper.style.transform = `translateY(${scrollY * fator}px)`;
+         }
+     }
+
+     // Corrige o efeito ao redimensionar e ao rolar
+     window.addEventListener('scroll', parallaxUrso, { passive: true });
+     window.addEventListener('resize', parallaxUrso);
+
+     // Inicializa na posição correta
+     parallaxUrso();
+ });
+</script>
+
+ <!-- Apresentação Arti Kids -->
+ <section class="py-16 bg-[#e1e0e7] bg-[url('/images/fundo_kids.png')] bg-cover bg-center">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+             
+                 <div class="rounded-xl flex items-center justify-center overflow-hidden h-[60vh]">
+                     <video 
+                         class="w-full h-full object-contain"
+                         src="/images/artito-final.mp4" 
+                         autoplay 
+                         loop 
+                         muted 
+                         playsinline
+                     ></video>
+                 </div>
+
+             
+             <!-- Texto Explicativo -->
+             <div class="space-y-6">
+                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                     Atendimento Personalizado Arti Kids
+                 </h2>
+                 <p class="text-xl text-gray-600 leading-relaxed">
+                     No Arti Kids, entendemos que cada criança é única e merece um atendimento especial. 
+                     Nossa equipe de odontopediatras especializados cria um ambiente acolhedor e divertido, 
+                     onde os pequenos se sentem seguros e confortáveis.
+                 </p>
+                 <p class="text-lg text-gray-600 leading-relaxed">
+                     Utilizamos técnicas modernas e equipamentos específicos para crianças, sempre com 
+                     muito carinho e paciência. Nosso objetivo é criar uma experiência positiva desde 
+                     a primeira consulta, formando adultos com hábitos saudáveis de saúde bucal.
+                 </p>
+                 <div class="flex flex-wrap gap-4 pt-4">
+                     <div class="flex items-center text-teal-600">
+                         <span class="text-2xl mr-2">✅</span>
+                         <span class="font-semibold">Ambiente Lúdico</span>
+                     </div>
+                     <div class="flex items-center text-teal-600">
+                         <span class="text-2xl mr-2">✅</span>
+                         <span class="font-semibold">Profissionais Especializados</span>
+                     </div>
+                     <div class="flex items-center text-teal-600">
+                         <span class="text-2xl mr-2">✅</span>
+                         <span class="font-semibold">Técnicas Modernas</span>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+ </section>
+ <img src="/images/nuvem-artito.png" alt="Nuvem decorativa" class="w-full h-auto">
+
+ <!-- Serviços Especiais para Crianças -->
+ <section class="py-16 bg-gray-50">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         <div class="text-center mb-12">
+             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                 Serviços Especiais para Crianças
+             </h2>
+             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                 Oferecemos tratamentos específicos para cada fase do desenvolvimento da criança, 
+                 sempre com técnicas modernas e ambiente acolhedor.
+             </p>
+         </div>
+         
+         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+             <!-- Primeira Consulta -->
+             <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                 <div class="text-4xl mb-4">👶</div>
+                 <h3 class="text-xl font-bold text-gray-900 mb-4">Primeira Consulta</h3>
+                 <p class="text-gray-600 mb-4">
+                     A partir dos 6 meses, quando os primeiros dentes aparecem. Avaliação inicial 
+                     e orientações para os pais em ambiente acolhedor.
+                 </p>
+                 <ul class="text-gray-600 space-y-2">
+                     <li>• Avaliação do desenvolvimento dental</li>
+                     <li>• Orientações personalizadas para os pais</li>
+                     <li>• Primeiro contato positivo com o dentista</li>
+                     <li>• Plano de acompanhamento individual</li>
+                 </ul>
+             </div>
+             
+             <!-- Prevenção -->
+             <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                 <div class="text-4xl mb-4">🦷</div>
+                 <h3 class="text-xl font-bold text-gray-900 mb-4">Prevenção</h3>
+                 <p class="text-gray-600 mb-4">
+                     Tratamentos preventivos para manter a saúde bucal das crianças com técnicas 
+                     modernas e sem desconforto.
+                 </p>
+                 <ul class="text-gray-600 space-y-2">
+                     <li>• Limpeza profissional especializada</li>
+                     <li>• Aplicação de flúor com sabores infantis</li>
+                     <li>• Selante dental preventivo</li>
+                     <li>• Educação em saúde bucal lúdica</li>
+                 </ul>
+             </div>
+             
+             <!-- Tratamento de Cáries -->
+             <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                 <div class="text-4xl mb-4">🦷</div>
+                 <h3 class="text-xl font-bold text-gray-900 mb-4">Tratamento de Cáries</h3>
+                 <p class="text-gray-600 mb-4">
+                     Restaurações estéticas e tratamentos para cáries em dentes de leite com 
+                     técnicas minimamente invasivas.
+                 </p>
+                 <ul class="text-gray-600 space-y-2">
+                     <li>• Restaurações coloridas e atrativas</li>
+                     <li>• Tratamento sem dor com anestesia tópica</li>
+                     <li>• Técnicas modernas e rápidas</li>
+                     <li>• Acompanhamento pós-tratamento</li>
+                 </ul>
+             </div>
+             
+             <!-- Ortodontia Infantil -->
+             <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                 <div class="text-4xl mb-4">🦷</div>
+                 <h3 class="text-xl font-bold text-gray-900 mb-4">Ortodontia Infantil</h3>
+                 <p class="text-gray-600 mb-4">
+                     Correção precoce de problemas de mordida e alinhamento dental com 
+                     aparelhos modernos e confortáveis.
+                 </p>
+                 <ul class="text-gray-600 space-y-2">
+                     <li>• Aparelhos móveis coloridos</li>
+                     <li>• Correção de hábitos nocivos</li>
+                     <li>• Prevenção de problemas futuros</li>
+                     <li>• Acompanhamento do crescimento</li>
+                 </ul>
+             </div>
+             
+             <!-- Emergências -->
+             <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                 <div class="text-4xl mb-4">🚨</div>
+                 <h3 class="text-xl font-bold text-gray-900 mb-4">Emergências</h3>
+                 <p class="text-gray-600 mb-4">
+                     Atendimento de urgência para acidentes e dores dentárias em crianças 
+                     com equipe preparada e ambiente acolhedor.
+                 </p>
+                 <ul class="text-gray-600 space-y-2">
+                     <li>• Fraturas dentárias</li>
+                     <li>• Dores de dente agudas</li>
+                     <li>• Traumatismos dentários</li>
+                     <li>• Atendimento 24h para casos graves</li>
+                 </ul>
+             </div>
+             
+             <!-- Acompanhamento -->
+             <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                 <div class="text-4xl mb-4">📊</div>
+                 <h3 class="text-xl font-bold text-gray-900 mb-4">Acompanhamento</h3>
+                 <p class="text-gray-600 mb-4">
+                     Acompanhamento completo do desenvolvimento dental e crescimento da criança 
+                     com consultas personalizadas.
+                 </p>
+                 <ul class="text-gray-600 space-y-2">
+                     <li>• Consultas periódicas personalizadas</li>
+                     <li>• Avaliação de crescimento e desenvolvimento</li>
+                     <li>• Orientações contínuas para os pais</li>
+                     <li>• Histórico completo da saúde bucal</li>
+                 </ul>
+             </div>
+         </div>
+     </div>
+ </section>
+
+ <!-- CTA Section -->
+ <section class="py-16 bg-gradient-to-r from-teal-600 to-teal-700 text-white">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+         <h2 class="text-3xl md:text-4xl font-bold mb-4">
+             Agende a primeira consulta do seu filho
+         </h2>
+         <p class="text-xl mb-8 text-teal-100">
+             Vamos cuidar do sorriso do seu pequeno com carinho, dedicação e muito amor!
+         </p>
+         <div class="flex flex-col sm:flex-row gap-4 justify-center">
+             <a href="/contato" class="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold hover:bg-teal-50 transition-colors">
+                 Agendar Consulta
+             </a>
+             <a href="/a-clinica" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors">
+                 Conheça a Clínica
+             </a>
+         </div>
+     </div>
+ </section>
+
 
 </Layout>
