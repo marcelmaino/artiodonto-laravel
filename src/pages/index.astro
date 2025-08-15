@@ -1334,11 +1334,11 @@ import Layout from '../layouts/Layout.astro';
                       
                                 depoimentosAleatorios.forEach(review => {
                                   const card = document.createElement('article');
-                                  card.className = 'mr-0 sm:ml-20 bg-white/90 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 fade-on-scroll opacity-0';
+                                  card.className = 'mr-0 sm:ml-20 bg-white/90 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 fade-on-scroll opacity-0 space-y-4';
                                   card.innerHTML = `
                                     <header class="flex flex-col items-center">
                                         
-                                            <div class="flex items-center w-full flex-col gap-2">
+                                            <div class="flex items-start w-full flex-col">
                                                 <div class="bg-teal-100 rounded-full flex items-center justify-center mr-3">
                                                     <img src="${review.profile_photo_url}" alt="Foto de ${review.author_name}" class="w-14 h-14 rounded-full border-2 border-teal-400 shadow mb-2 object-cover" />
                                                 </div>
