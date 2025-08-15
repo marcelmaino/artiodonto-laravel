@@ -1292,7 +1292,7 @@ import Layout from '../layouts/Layout.astro';
 
                     <div id="depoimentos-php-container">
                         <p>Carregando depoimentos...</p>
-                      </div>
+                    </div>
                       
                   
                       
@@ -1338,7 +1338,7 @@ import Layout from '../layouts/Layout.astro';
                                   card.innerHTML = `
                                     <header class="flex flex-col items-center">
                                         
-                                            <div class="flex items-center w-full">
+                                            <div class="flex items-center w-full flex-col gap-2">
                                                 <div class="bg-teal-100 rounded-full flex items-center justify-center mr-3">
                                                     <img src="${review.profile_photo_url}" alt="Foto de ${review.author_name}" class="w-14 h-14 rounded-full border-2 border-teal-400 shadow mb-2 object-cover" />
                                                 </div>
@@ -1353,7 +1353,7 @@ import Layout from '../layouts/Layout.astro';
 
                                             </div>
 
-                                    
+                                    </header>
                            
                                     
                                   `;
