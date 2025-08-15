@@ -1338,11 +1338,11 @@ import Layout from '../layouts/Layout.astro';
                                   card.innerHTML = `
                                     <header class="flex flex-col items-center">
                                         
-                                            <div class="flex items-start w-full flex-col">
-                                                <div class="bg-teal-100 rounded-full flex items-center justify-center mr-3">
+                                            <div class="flex items-start w-full flex-row">
+                                                <div class="bg-teal-100 rounded-full flex items-center justify-center mr-3 w-4/12">
                                                     <img src="${review.profile_photo_url}" alt="Foto de ${review.author_name}" class="w-14 h-14 rounded-full border-2 border-teal-400 shadow mb-2 object-cover" />
                                                 </div>
-                                                <div>
+                                                <div class="w-8/12">
                                                     <p class="font-semibold text-gray-800">${review.author_name}</p>
                                                     <p class="text-yellow-400 text-base mb-1">${'⭐'.repeat(review.rating)}</p>
                                                     <p class="text-gray-400 text-xs">${review.relative_time_description}</p>
