@@ -34,6 +34,12 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           echo "Preparando deploy do site estático..."
+          # Preservar pasta api antes do backup
+          if [ -d "public/api" ]; then
+            echo "Preservando pasta api..."
+            cp -r public/api api_backup
+          fi
+          
           # Criar backup se existir conteúdo
           if [ "$(ls -A public/ 2>/dev/null)" ]; then
             echo "Fazendo backup dos arquivos atuais..."
@@ -68,6 +74,12 @@ jobs:
           echo "Movendo arquivos para pasta public..."
           mv temp_build/* public/ 2>/dev/null || true
           rm -rf temp_build
+          
+          # Restaurar pasta api se existia
+          if [ -d "api_backup" ]; then
+            echo "Restaurando pasta api..."
+            mv api_backup public/api
+          fi
           
           echo "Configurando permissões..."
           chmod -R 755 public/
