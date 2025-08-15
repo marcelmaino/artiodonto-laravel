@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Depoimentos - Arti Odontologia e Saúde - Clínica Odontológica em Passo Fundo - RS" description="Conheça os depoimentos de nossos pacientes satisfeitos. Veja como transformamos sorrisos na Arti Odontologia e Saúde." isInternalPage={true}>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-teal-800 via-teal-600 to-teal-900 text-white py-20 sm:py-32">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-6xl font-bold mb-6 fonte-ubuntu">
+                    Depoimentos dos Nossos Pacientes
+                </h1>
+                <p class="text-xl sm:text-2xl text-teal-100 mb-8">
+                    Conheça as experiências de quem confiou em nós para cuidar de seus sorrisos
+                </p>
+                <div class="w-24 h-1 bg-teal-300 mx-auto rounded-full"></div>
+            </div>
+        </div>
+        
+        <!-- Elementos decorativos -->
+        <div class="absolute top-10 left-10 opacity-20">
+            <img src="/images/nuvem1.png" alt="" class="w-20 h-20 animate-pulse">
+        </div>
+        <div class="absolute bottom-10 right-10 opacity-20">
+            <img src="/images/nuvem2.png" alt="" class="w-16 h-16 animate-pulse">
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos Vazia -->
+    <section class="py-16 sm:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 fonte-ubuntu">
+                    O que nossos pacientes dizem
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Cada sorriso transformado é uma história de sucesso. Veja os depoimentos de quem escolheu a Arti para cuidar de sua saúde bucal.
+                </p>
+            </div>
+
+
+            ---
+            // Nenhum dado é buscado durante o build. O componente é puramente estático.
+            ---
+            <div id="depoimentos-php-container" class="depoimentos-container">
+              <p>Carregando depoimentos...</p>
+            </div>
+            
+            <style>
+              /* Adicione seu CSS aqui para estilizar os cards de depoimento */
+              .depoimentos-container { /* ... */ }
+              .card-depoimento { /* ... */ }
+            </style>
+            
+            <script>
+              // Este script roda no navegador do usuário
+              document.addEventListener('DOMContentLoaded', () => {
+                const container = document.getElementById('depoimentos-php-container');
+            
+                // A URL agora aponta para o seu script PHP no seu servidor
+                fetch('/api/get_reviews.php')
+                  .then(response => {
+                    if (!response.ok) {
+                      throw new Error('Falha ao buscar depoimentos no servidor.');
+                    }
+                    return response.json();
+                  })
+                  .then(reviews => {
+                    // Limpa a mensagem "Carregando..."
+                    container.innerHTML = '<h2>O que nossos clientes dizem</h2>'; 
+            
+                    if (reviews && reviews.length > 0) {
+                      const grid = document.createElement('div');
+                      grid.className = 'depoimentos-grid'; // Use para estilizar com CSS
+            
+                      reviews.slice(0, 5).forEach(review => { // Mostra os 5 mais recentes
+                        const card = document.createElement('article');
+                        card.className = 'card-depoimento';
+                        card.innerHTML = `
+                          <header>
+                            <img src="${review.profile_photo_url}" alt="Foto de ${review.author_name}" width="50" height="50" style="border-radius: 50%;" />
+                            <div>
+                              <strong>${review.author_name}</strong>
+                              <p>${'⭐'.repeat(review.rating)}</p>
+                            </div>
+                          </header>
+                          <p class="texto-depoimento">"${review.text}"</p>
+                          <small>${review.relative_time_description}</small>
+                        `;
+                        grid.appendChild(card);
+                      });
+                      container.appendChild(grid);
+                    } else {
+                      container.innerHTML += '<p>Nenhum depoimento encontrado no momento.</p>';
+                    }
+                  })
+                  .catch(error => {
+                    console.error('Erro:', error);
+                    container.innerHTML = '<p>Não foi possível carregar os depoimentos.</p>';
+                  });
+              });
+            </script>
+
+
+
+
+
+            <!-- Área para Depoimentos (Vazia) -->
+            <div class="bg-white rounded-2xl shadow-lg p-16 text-center">
+                <div class="max-w-md mx-auto">
+                    <div class="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-4">
+                        Área de Depoimentos
+                    </h3>
+                    <p class="text-gray-500 mb-6">
+                        Esta seção será preenchida com depoimentos reais de nossos pacientes satisfeitos.
+                    </p>
+                    <div class="bg-gray-100 rounded-lg p-6">
+                        <p class="text-sm text-gray-600">
+                            <strong>Em breve:</strong> Depoimentos, avaliações e histórias de sucesso dos nossos pacientes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção CTA -->
+    <section class="py-16 sm:py-24 bg-gradient-to-r from-teal-800 via-teal-600 to-teal-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 fonte-ubuntu">
+                Quer fazer parte das nossas histórias de sucesso?
+            </h2>
+            <p class="text-xl text-teal-100 mb-8 max-w-2xl mx-auto">
+                Agende sua consulta e descubra como podemos transformar seu sorriso também!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contato" class="bg-white text-teal-700 px-8 py-4 rounded-full font-semibold hover:bg-teal-50 transition-colors duration-300 transform hover:scale-105">
+                    Agendar Consulta
+                </a>
+                <a href="https://wa.me/5554999999999" target="_blank" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-teal-700 transition-colors duration-300 transform hover:scale-105">
+                    Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .fonte-ubuntu {
+            font-family: 'Ubuntu', sans-serif;
+        }
+    </style>
+
+</Layout>
