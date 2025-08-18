@@ -25,6 +25,18 @@ import Layout from '../layouts/Layout.astro';
         background: #f0f0f0;
         min-height: 200px;
         border: 2px solid #e5e7eb;
+        /* Previne seleção de texto */
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        /* Previne seleção de imagem */
+        -webkit-touch-callout: none;
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
     }
     
     .before-after-container img {
@@ -37,6 +49,17 @@ import Layout from '../layouts/Layout.astro';
         display: block;
         max-width: none;
         max-height: none;
+        /* Previne seleção e arraste das imagens */
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+        pointer-events: none; /* Permite que o container receba os eventos */
     }
     
     .before-after-container img:first-child {
@@ -61,6 +84,12 @@ import Layout from '../layouts/Layout.astro';
         transform: translateX(-50%);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         transition: left 0.1s ease;
+        /* Previne seleção do handle */
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        pointer-events: auto; /* Garante que o handle receba eventos */
     }
     
     .slider-handle::before {
@@ -1568,6 +1597,120 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+});
+
+// Script para o slider de antes e depois
+document.addEventListener('DOMContentLoaded', function() {
+    const beforeAfterContainers = document.querySelectorAll('.before-after-container');
+    
+    beforeAfterContainers.forEach(container => {
+        const sliderHandle = container.querySelector('.slider-handle');
+        const afterImage = container.querySelector('.after-image');
+        let isDragging = false;
+        
+        // Define a posição inicial (50%)
+        container.style.setProperty('--clip-position', '50%');
+        
+        // Função para atualizar a posição do slider
+        function updateSliderPosition(clientX) {
+            const rect = container.getBoundingClientRect();
+            const x = clientX - rect.left;
+            const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+            
+            // Atualiza a variável CSS para o clip-path
+            container.style.setProperty('--clip-position', percentage + '%');
+            
+            // Atualiza a posição do slider handle
+            if (sliderHandle) {
+                sliderHandle.style.left = percentage + '%';
+            }
+        }
+        
+        // Função para prevenir seleção padrão
+        function preventSelection(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+        
+        // Event listeners para mouse
+        container.addEventListener('mousedown', function(e) {
+            e.preventDefault();
+            isDragging = true;
+            updateSliderPosition(e.clientX);
+            container.style.cursor = 'col-resize';
+            
+            // Previne seleção durante o arraste
+            document.addEventListener('selectstart', preventSelection);
+        });
+        
+        document.addEventListener('mousemove', function(e) {
+            if (isDragging) {
+                e.preventDefault();
+                updateSliderPosition(e.clientX);
+            }
+        });
+        
+        document.addEventListener('mouseup', function() {
+            if (isDragging) {
+                isDragging = false;
+                container.style.cursor = 'col-resize';
+                
+                // Remove a prevenção de seleção
+                document.removeEventListener('selectstart', preventSelection);
+            }
+        });
+        
+        // Event listeners para touch (dispositivos móveis)
+        container.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            isDragging = true;
+            const touch = e.touches[0];
+            updateSliderPosition(touch.clientX);
+        });
+        
+        container.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (isDragging) {
+                const touch = e.touches[0];
+                updateSliderPosition(touch.clientX);
+            }
+        });
+        
+        container.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            isDragging = false;
+        });
+        
+        // Event listener para clique direto no container
+        container.addEventListener('click', function(e) {
+            if (!isDragging) {
+                e.preventDefault();
+                updateSliderPosition(e.clientX);
+            }
+        });
+        
+        // Event listener para hover (opcional - para melhor UX)
+        container.addEventListener('mouseenter', function() {
+            if (!isDragging) {
+                container.style.cursor = 'col-resize';
+            }
+        });
+        
+        container.addEventListener('mouseleave', function() {
+            if (!isDragging) {
+                container.style.cursor = 'default';
+            }
+        });
+        
+        // Previne seleção de texto em todo o container
+        container.addEventListener('selectstart', preventSelection);
+        container.addEventListener('dragstart', preventSelection);
+    });
+    
+    console.log('Slider de antes e depois inicializado com sucesso!');
 });
 </script>
 
