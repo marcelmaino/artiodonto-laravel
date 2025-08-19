@@ -4,6 +4,12 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Arti Odontologia e Saúde - Clínica Odontológica em Passo Fundo - RS" description=" Sorrir é uma arte! Todas as especialidades, um só objetivo: seu melhor sorriso!">
 
+<!-- CSS do Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- JavaScript do Swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
     
     
@@ -374,24 +380,24 @@ import Layout from '../layouts/Layout.astro';
         <div class="container mx-auto px-4 mt-20">
             <div class="relative">
                 <!-- Container do Slider -->
-                <div class="overflow-hidden pb-10">
-                    <div class="flex transition-transform duration-500 ease-in-out" id="procedimentos-slider-container">
+                <div class="swiper slider-procedimentos overflow-hidden pb-10">
+                    <div class="swiper-wrapper">
                         
                         
-                        <!-- Card 1: Odontologia Estética -->
-                        <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-4">
+                        <!-- Card 1: Odontopediatria -->
+                        <div class="swiper-slide w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-4">
                             <div class="relative group w-full max-w-[353px] h-[294px] mx-auto">
                                 <!-- Título -->
                                 <div class="absolute 2xl:top-3 top-10 left-5 right-0 z-30">
-                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0" style="font-family: 'Ubuntu', sans-serif;">Clínica Geral</h3>
+                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0" style="font-family: 'Ubuntu', sans-serif;">Odontopediatria</h3>
                                 </div>
                                 
                                 <!-- Texto que aparece no hover (acima da div verde) -->
                                 <div class="absolute inset-0 flex items-center justify-center z-35 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     <div class="text-center px-4">
-                                        <h4 class="text-white font-bold text-lg mb-2">Clínica Geral</h4>
+                                        <h4 class="text-white font-bold text-lg mb-2">Odontopediatria</h4>
                                         <p class="text-white/90 text-sm leading-relaxed">
-                                        Variedade de tratamentos e procedimentos para manter a saúde bucal, prevenir doenças e promover bem-estar. Inclui consultas de rotina, limpezas dentárias, diagnósticos e orientações preventivas para toda a família.
+                                        A Arti Kids oferece consultas cheias de afeto e uma estrutura lúdica para cultivar uma relação positiva com a saúde bucal desde cedo. Cada criança é tratada de forma personalizada.
                                         </p>
                                     </div>
                                 </div>
@@ -404,7 +410,7 @@ import Layout from '../layouts/Layout.astro';
                                         </mask>
                                     </defs>
                                     <image 
-                                        href="/images/procedimentos/clinica-geral.jpg" 
+                                        href="/images/procedimentos/odontopediatria.webp" 
                                         class="w-full h-full"
                                         mask="url(#mascara-mask-1)" 
                                         preserveAspectRatio="xMidYMid slice"
@@ -428,21 +434,21 @@ import Layout from '../layouts/Layout.astro';
                                 </div>
                             </div>
                         </div>
-    
-                        <!-- Card 2: Ortodontia Fixa -->
-                        <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-5">
+
+                        <!-- Card 2: Clínica Geral -->
+                        <div class="swiper-slide w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-5">
                             <div class="relative group w-full max-w-[353px] h-[294px] mx-auto">
                                 <!-- Título -->
                                 <div class="absolute 2xl:top-3 top-10 left-5 right-0 z-30">
-                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0">Ortodontia<br>Fixa</h3>
+                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0" style="font-family: 'Ubuntu', sans-serif;">Clínica Geral</h3>
                                 </div>
                                 
                                 <!-- Texto que aparece no hover (acima da div verde) -->
                                 <div class="absolute inset-0 flex items-center justify-center z-35 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     <div class="text-center px-4">
-                                        <h4 class="text-white font-bold text-lg mb-2">Alinhamento perfeito</h4>
+                                        <h4 class="text-white font-bold text-lg mb-2">Clínica Geral</h4>
                                         <p class="text-white/90 text-sm leading-relaxed">
-                                        Correção da posição dos dentes, alinhamento de mordida e sua relação com as bases ósseas, através de aparelhos fixos, brackets e fios metálicos, para melhorar a estética e a função dental.
+                                        Variedade de tratamentos e procedimentos para manter a saúde bucal, prevenir doenças e promover bem-estar. Inclui consultas de rotina, limpezas dentárias e diagnósticos.
                                         </p>
                                     </div>
                                 </div>
@@ -455,7 +461,7 @@ import Layout from '../layouts/Layout.astro';
                                         </mask>
                                     </defs>
                                     <image 
-                                        href="/images/procedimentos/ortodontia-fixa.jpg" 
+                                        href="/images/procedimentos/clinica-geral.webp" 
                                         class="w-full h-full"
                                         mask="url(#mascara-mask-2)" 
                                         preserveAspectRatio="xMidYMid slice"
@@ -479,21 +485,21 @@ import Layout from '../layouts/Layout.astro';
                                 </div>
                             </div>
                         </div>
-    
-                        <!-- Card 3: Implantodontia -->
-                        <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-6">
+
+                        <!-- Card 3: Cirurgia Bucomaxilofacial -->
+                        <div class="swiper-slide w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-6">
                             <div class="relative group w-full max-w-[353px] h-[294px] mx-auto">
                                 <!-- Título -->
                                 <div class="absolute 2xl:top-3 top-10 left-5 right-0 z-30">
-                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0">Implantodontia</h3>
+                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0" style="font-family: 'Ubuntu', sans-serif;">Cirurgia Bucomaxilofacial</h3>
                                 </div>
                                 
                                 <!-- Texto que aparece no hover (acima da div verde) -->
                                 <div class="absolute inset-0 flex items-center justify-center z-35 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     <div class="text-center px-4">
-                                        <h4 class="text-white font-bold text-lg mb-2">Restauração permanente</h4>
+                                        <h4 class="text-white font-bold text-lg mb-2">Cirurgia Bucomaxilofacial</h4>
                                         <p class="text-white/90 text-sm leading-relaxed">
-                                            Colocação de implantes dentários para substituir dentes perdidos, proporcionando uma base sólida para próteses.
+                                        Tratamento cirúrgico de doenças, lesões e malformações da boca, face e região craniofacial. Inclui extrações complexas e cirurgias de terceiros molares.
                                         </p>
                                     </div>
                                 </div>
@@ -506,7 +512,7 @@ import Layout from '../layouts/Layout.astro';
                                         </mask>
                                     </defs>
                                     <image 
-                                        href="/images/procedimentos/implantodontia.jpg" 
+                                        href="/images/procedimentos/cirurgia-bucomaxilofacial.webp" 
                                         class="w-full h-full"
                                         mask="url(#mascara-mask-3)" 
                                         preserveAspectRatio="xMidYMid slice"
@@ -530,21 +536,21 @@ import Layout from '../layouts/Layout.astro';
                                 </div>
                             </div>
                         </div>
-    
-                        <!-- Card 4: Patologias Bucais -->
-                        <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-7">
+                        
+                        <!-- Card 4: Fisioterapia Cervicocraniomandibular -->
+                        <div class="swiper-slide w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-7">
                             <div class="relative group w-full max-w-[353px] h-[294px] mx-auto">
                                 <!-- Título -->
                                 <div class="absolute 2xl:top-3 top-10 left-5 right-0 z-30">
-                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0">Reabilitação<br>Oral</h3>
+                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0" style="font-family: 'Ubuntu', sans-serif;">Fisioterapia Cervicocraniomandibular</h3>
                                 </div>
                                 
                                 <!-- Texto que aparece no hover (acima da div verde) -->
                                 <div class="absolute inset-0 flex items-center justify-center z-35 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     <div class="text-center px-4">
-                                        <h4 class="text-white font-bold text-lg mb-2">Reabilitação Oral</h4>
+                                        <h4 class="text-white font-bold text-lg mb-2">Fisioterapia Cervicocraniomandibular</h4>
                                         <p class="text-white/90 text-sm leading-relaxed">
-                                            Restauração da anatomia bucal, de forma a recuperar a saúde, a função e transformar a estética do sorriso.
+                                        Diagnóstico e tratamento de disfunções musculoesqueléticas que afetam a região da cabeça, pescoço e mandíbula. Indicada para DTM e bruxismo.
                                         </p>
                                     </div>
                                 </div>
@@ -557,7 +563,7 @@ import Layout from '../layouts/Layout.astro';
                                         </mask>
                                     </defs>
                                     <image 
-                                        href="/images/procedimentos/reabilitacao-oral.jpg" 
+                                        href="/images/procedimentos/fisioterapia-cervicocraniomandibular.webp" 
                                         class="w-full h-full"
                                         mask="url(#mascara-mask-4)" 
                                         preserveAspectRatio="xMidYMid slice"
@@ -581,21 +587,21 @@ import Layout from '../layouts/Layout.astro';
                                 </div>
                             </div>
                         </div>
-    
-                        <!-- Card 5: Alinhador Ortodôntico -->
-                        <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-8">
+                        
+                        <!-- Card 5: Patologias Bucais -->
+                        <div class="swiper-slide w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-8">
                             <div class="relative group w-full max-w-[353px] h-[294px] mx-auto">
                                 <!-- Título -->
                                 <div class="absolute 2xl:top-3 top-10 left-5 right-0 z-30">
-                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0">Alinhador<br>Ortodôntico</h3>
+                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0" style="font-family: 'Ubuntu', sans-serif;">Patologias Bucais</h3>
                                 </div>
                                 
                                 <!-- Texto que aparece no hover (acima da div verde) -->
                                 <div class="absolute inset-0 flex items-center justify-center z-35 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     <div class="text-center px-4">
-                                        <h4 class="text-white font-bold text-lg mb-2">Alinhamento invisível</h4>
+                                        <h4 class="text-white font-bold text-lg mb-2">Patologias Bucais</h4>
                                         <p class="text-white/90 text-sm leading-relaxed">
-                                            Alinhadores transparentes e removíveis para um tratamento ortodôntico discreto e eficaz.
+                                        A estomatologia busca a prevenção, diagnóstico e tratamento das doenças que afetam a cavidade oral. Inclui diagnóstico precoce de lesões e biópsias.
                                         </p>
                                     </div>
                                 </div>
@@ -608,7 +614,7 @@ import Layout from '../layouts/Layout.astro';
                                         </mask>
                                     </defs>
                                     <image 
-                                        href="/images/procedimentos/alinhador-ortodontico.jpg" 
+                                        href="/images/procedimentos/patologias-bucais.webp" 
                                         class="w-full h-full"
                                         mask="url(#mascara-mask-5)" 
                                         preserveAspectRatio="xMidYMid slice"
@@ -632,21 +638,473 @@ import Layout from '../layouts/Layout.astro';
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Card 6: Laserterapia -->
+                        <div class="swiper-slide w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-4">
+                            <div class="relative group w-full max-w-[353px] h-[294px] mx-auto">
+                                <!-- Título -->
+                                <div class="absolute 2xl:top-3 top-10 left-5 right-0 z-30">
+                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0" style="font-family: 'Ubuntu', sans-serif;">Laserterapia</h3>
+                                </div>
+                                
+                                <!-- Texto que aparece no hover (acima da div verde) -->
+                                <div class="absolute inset-0 flex items-center justify-center z-35 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <div class="text-center px-4">
+                                        <h4 class="text-white font-bold text-lg mb-2">Laserterapia</h4>
+                                        <p class="text-white/90 text-sm leading-relaxed">
+                                        Utilização de feixes de laser para regenerar tecidos, reduzir dor e inflamação e acelerar a cicatrização. Tratamento não invasivo que promove alívio imediato.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Imagem mascarada -->
+                                <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <mask id="mascara-mask-6">
+                                            <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                                        </mask>
+                                    </defs>
+                                    <image 
+                                        href="/images/procedimentos/laserterapia.webp" 
+                                        class="w-full h-full"
+                                        mask="url(#mascara-mask-6)" 
+                                        preserveAspectRatio="xMidYMid slice"
+                                    />
+                                    <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                                    <g mask="url(#mascara-mask-6)">
+                                        <rect 
+                                            x="0" y="0" width="203" height="169"
+                                            fill="#14B8A6" 
+                                            fill-opacity="1"
+                                            class="transition-opacity duration-500 opacity-50 group-hover:opacity-100"
+                                        />
+                                    </g>
+                                </svg>
+                                <div class="absolute bottom-0 right-0 z-40">
+                                    <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 7: Reabilitação Oral -->
+                        <div class="swiper-slide w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-4">
+                            <div class="relative group w-full max-w-[353px] h-[294px] mx-auto">
+                                <!-- Título -->
+                                <div class="absolute 2xl:top-3 top-10 left-5 right-0 z-30">
+                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0" style="font-family: 'Ubuntu', sans-serif;">Reabilitação Oral</h3>
+                                </div>
+                                
+                                <!-- Texto que aparece no hover (acima da div verde) -->
+                                <div class="absolute inset-0 flex items-center justify-center z-35 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <div class="text-center px-4">
+                                        <h4 class="text-white font-bold text-lg mb-2">Reabilitação Oral</h4>
+                                        <p class="text-white/90 text-sm leading-relaxed">
+                                        Restauração da anatomia bucal para recuperar a saúde, função e transformar a estética do sorriso. Abordagem multidisciplinar com diferentes tratamentos.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Imagem mascarada -->
+                                <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <mask id="mascara-mask-7">
+                                            <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                                        </mask>
+                                    </defs>
+                                    <image 
+                                        href="/images/procedimentos/reabilitacao-oral.webp" 
+                                        class="w-full h-full"
+                                        mask="url(#mascara-mask-7)" 
+                                        preserveAspectRatio="xMidYMid slice"
+                                    />
+                                    <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                                    <g mask="url(#mascara-mask-7)">
+                                        <rect 
+                                            x="0" y="0" width="203" height="169"
+                                            fill="#14B8A6" 
+                                            fill-opacity="1"
+                                            class="transition-opacity duration-500 opacity-50 group-hover:opacity-100"
+                                        />
+                                    </g>
+                                </svg>
+                                <div class="absolute bottom-0 right-0 z-40">
+                                    <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 8: Endodontia -->
+                        <div class="swiper-slide w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-4">
+                            <div class="relative group w-full max-w-[353px] h-[294px] mx-auto">
+                                <!-- Título -->
+                                <div class="absolute 2xl:top-3 top-10 left-5 right-0 z-30">
+                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0" style="font-family: 'Ubuntu', sans-serif;">Endodontia</h3>
+                                </div>
+                                
+                                <!-- Texto que aparece no hover (acima da div verde) -->
+                                <div class="absolute inset-0 flex items-center justify-center z-35 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <div class="text-center px-4">
+                                        <h4 class="text-white font-bold text-lg mb-2">Endodontia</h4>
+                                        <p class="text-white/90 text-sm leading-relaxed">
+                                        Tratamento de doenças e lesões da polpa dental e dos canais radiculares. Popularmente conhecido como "tratamento de canal", remove a infecção e preserva o dente.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Imagem mascarada -->
+                                <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <mask id="mascara-mask-8">
+                                            <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                                        </mask>
+                                    </defs>
+                                    <image 
+                                        href="/images/procedimentos/endodontia.webp" 
+                                        class="w-full h-full"
+                                        mask="url(#mascara-mask-8)" 
+                                        preserveAspectRatio="xMidYMid slice"
+                                    />
+                                    <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                                    <g mask="url(#mascara-mask-8)">
+                                        <rect 
+                                            x="0" y="0" width="203" height="169"
+                                            fill="#14B8A6" 
+                                            fill-opacity="1"
+                                            class="transition-opacity duration-500 opacity-50 group-hover:opacity-100"
+                                        />
+                                    </g>
+                                </svg>
+                                <div class="absolute bottom-0 right-0 z-40">
+                                    <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 9: Ortodontia Fixa -->
+                        <div class="swiper-slide w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-4">
+                            <div class="relative group w-full max-w-[353px] h-[294px] mx-auto">
+                                <!-- Título -->
+                                <div class="absolute 2xl:top-3 top-10 left-5 right-0 z-30">
+                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0" style="font-family: 'Ubuntu', sans-serif;">Ortodontia Fixa</h3>
+                                </div>
+                                
+                                <!-- Texto que aparece no hover (acima da div verde) -->
+                                <div class="absolute inset-0 flex items-center justify-center z-35 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <div class="text-center px-4">
+                                        <h4 class="text-white font-bold text-lg mb-2">Ortodontia Fixa</h4>
+                                        <p class="text-white/90 text-sm leading-relaxed">
+                                        Correção da posição dos dentes, alinhamento de mordida através de aparelhos fixos, brackets e fios metálicos. Proporciona um sorriso harmônico e melhora a mastigação.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Imagem mascarada -->
+                                <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <mask id="mascara-mask-9">
+                                            <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                                        </mask>
+                                    </defs>
+                                    <image 
+                                        href="/images/procedimentos/ortodontia-fixa.webp" 
+                                        class="w-full h-full"
+                                        mask="url(#mascara-mask-9)" 
+                                        preserveAspectRatio="xMidYMid slice"
+                                    />
+                                    <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                                    <g mask="url(#mascara-mask-9)">
+                                        <rect 
+                                            x="0" y="0" width="203" height="169"
+                                            fill="#14B8A6" 
+                                            fill-opacity="1"
+                                            class="transition-opacity duration-500 opacity-50 group-hover:opacity-100"
+                                        />
+                                    </g>
+                                </svg>
+                                <div class="absolute bottom-0 right-0 z-40">
+                                    <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 10: Prótese Dentária -->
+                        <div class="swiper-slide w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-4">
+                            <div class="relative group w-full max-w-[353px] h-[294px] mx-auto">
+                                <!-- Título -->
+                                <div class="absolute 2xl:top-3 top-10 left-5 right-0 z-30">
+                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0" style="font-family: 'Ubuntu', sans-serif;">Prótese Dentária</h3>
+                                </div>
+                                
+                                <!-- Texto que aparece no hover (acima da div verde) -->
+                                <div class="absolute inset-0 flex items-center justify-center z-35 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <div class="text-center px-4">
+                                        <h4 class="text-white font-bold text-lg mb-2">Prótese Dentária</h4>
+                                        <p class="text-white/90 text-sm leading-relaxed">
+                                        Reabilitação de dentes perdidos ou danificados usando dispositivos protéticos como facetas, coroas e próteses. Restaura a função mastigatória e a estética do sorriso.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Imagem mascarada -->
+                                <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <mask id="mascara-mask-10">
+                                            <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                                        </mask>
+                                    </defs>
+                                    <image 
+                                        href="/images/procedimentos/protese-dentaria.webp" 
+                                        class="w-full h-full"
+                                        mask="url(#mascara-mask-10)" 
+                                        preserveAspectRatio="xMidYMid slice"
+                                    />
+                                    <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                                    <g mask="url(#mascara-mask-10)">
+                                        <rect 
+                                            x="0" y="0" width="203" height="169"
+                                            fill="#14B8A6" 
+                                            fill-opacity="1"
+                                            class="transition-opacity duration-500 opacity-50 group-hover:opacity-100"
+                                        />
+                                    </g>
+                                </svg>
+                                <div class="absolute bottom-0 right-0 z-40">
+                                    <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 11: Implantodontia -->
+                        <div class="swiper-slide w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-4">
+                            <div class="relative group w-full max-w-[353px] h-[294px] mx-auto">
+                                <!-- Título -->
+                                <div class="absolute 2xl:top-3 top-10 left-5 right-0 z-30">
+                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0" style="font-family: 'Ubuntu', sans-serif;">Implantodontia</h3>
+                                </div>
+                                
+                                <!-- Texto que aparece no hover (acima da div verde) -->
+                                <div class="absolute inset-0 flex items-center justify-center z-35 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <div class="text-center px-4">
+                                        <h4 class="text-white font-bold text-lg mb-2">Implantodontia</h4>
+                                        <p class="text-white/90 text-sm leading-relaxed">
+                                        Colocação de implantes dentários para substituir dentes perdidos, proporcionando uma base sólida para próteses. Promove a reabilitação oral completa.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Imagem mascarada -->
+                                <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <mask id="mascara-mask-11">
+                                            <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                                        </mask>
+                                    </defs>
+                                    <image 
+                                        href="/images/procedimentos/implantodontia.webp" 
+                                        class="w-full h-full"
+                                        mask="url(#mascara-mask-11)" 
+                                        preserveAspectRatio="xMidYMid slice"
+                                    />
+                                    <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                                    <g mask="url(#mascara-mask-11)">
+                                        <rect 
+                                            x="0" y="0" width="203" height="169"
+                                            fill="#14B8A6" 
+                                            fill-opacity="1"
+                                            class="transition-opacity duration-500 opacity-50 group-hover:opacity-100"
+                                        />
+                                    </g>
+                                </svg>
+                                <div class="absolute bottom-0 right-0 z-40">
+                                    <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 12: Alinhador Ortodôntico -->
+                        <div class="swiper-slide w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-4">
+                            <div class="relative group w-full max-w-[353px] h-[294px] mx-auto">
+                                <!-- Título -->
+                                <div class="absolute 2xl:top-3 top-10 left-5 right-0 z-30">
+                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0" style="font-family: 'Ubuntu', sans-serif;">Alinhador Ortodôntico</h3>
+                                </div>
+                                
+                                <!-- Texto que aparece no hover (acima da div verde) -->
+                                <div class="absolute inset-0 flex items-center justify-center z-35 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <div class="text-center px-4">
+                                        <h4 class="text-white font-bold text-lg mb-2">Alinhador Ortodôntico</h4>
+                                        <p class="text-white/90 text-sm leading-relaxed">
+                                        Correção da posição dos dentes através de dispositivos transparentes e removíveis discretos. Tratamento moderno que permite higienização adequada e maior conforto.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Imagem mascarada -->
+                                <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <mask id="mascara-mask-12">
+                                            <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                                        </mask>
+                                    </defs>
+                                    <image 
+                                        href="/images/procedimentos/alinhador-ortodontico.webp" 
+                                        class="w-full h-full"
+                                        mask="url(#mascara-mask-12)" 
+                                        preserveAspectRatio="xMidYMid slice"
+                                    />
+                                    <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                                    <g mask="url(#mascara-mask-12)">
+                                        <rect 
+                                            x="0" y="0" width="203" height="169"
+                                            fill="#14B8A6" 
+                                            fill-opacity="1"
+                                            class="transition-opacity duration-500 opacity-50 group-hover:opacity-100"
+                                        />
+                                    </g>
+                                </svg>
+                                <div class="absolute bottom-0 right-0 z-40">
+                                    <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 13: Periodontia -->
+                        <div class="swiper-slide w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-4">
+                            <div class="relative group w-full max-w-[353px] h-[294px] mx-auto">
+                                <!-- Título -->
+                                <div class="absolute 2xl:top-3 top-10 left-5 right-0 z-30">
+                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0" style="font-family: 'Ubuntu', sans-serif;">Periodontia</h3>
+                                </div>
+                                
+                                <!-- Texto que aparece no hover (acima da div verde) -->
+                                <div class="absolute inset-0 flex items-center justify-center z-35 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <div class="text-center px-4">
+                                        <h4 class="text-white font-bold text-lg mb-2">Periodontia</h4>
+                                        <p class="text-white/90 text-sm leading-relaxed">
+                                        Prevenção, diagnóstico e tratamento de doenças das gengivas e dos tecidos de suporte dos dentes. Inclui limpezas profundas e cirurgias gengivais.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Imagem mascarada -->
+                                <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <mask id="mascara-mask-13">
+                                            <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                                        </mask>
+                                    </defs>
+                                    <image 
+                                            href="/images/procedimentos/periodontia.webp" 
+                                        class="w-full h-full"
+                                        mask="url(#mascara-mask-13)" 
+                                        preserveAspectRatio="xMidYMid slice"
+                                    />
+                                    <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                                    <g mask="url(#mascara-mask-13)">
+                                        <rect 
+                                            x="0" y="0" width="203" height="169"
+                                            fill="#14B8A6" 
+                                            fill-opacity="1"
+                                            class="transition-opacity duration-500 opacity-50 group-hover:opacity-100"
+                                        />
+                                    </g>
+                                </svg>
+                                <div class="absolute bottom-0 right-0 z-40">
+                                    <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 14: Dentística Restauradora -->
+                        <div class="swiper-slide w-full sm:w-1/2 lg:w-1/4 px-2 procedimentos-fade-in delay-4">
+                            <div class="relative group w-full max-w-[353px] h-[294px] mx-auto">
+                                <!-- Título -->
+                                <div class="absolute 2xl:top-3 top-10 left-5 right-0 z-30">
+                                    <h3 class="text-white font-bold text-2xl text-left transition-colors duration-300 group-hover:text-teal-50/0" style="font-family: 'Ubuntu', sans-serif;">Dentística Restauradora</h3>
+                                </div>
+                                
+                                <!-- Texto que aparece no hover (acima da div verde) -->
+                                <div class="absolute inset-0 flex items-center justify-center z-35 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <div class="text-center px-4">
+                                        <h4 class="text-white font-bold text-lg mb-2">Dentística Restauradora</h4>
+                                        <p class="text-white/90 text-sm leading-relaxed">
+                                        Devolução da estética e função dental através de reparo e restauração de dentes danificados. Utiliza materiais avançados como resinas e porcelanas.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Imagem mascarada -->
+                                <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <mask id="mascara-mask-14">
+                                            <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                                        </mask>
+                                    </defs>
+                                    <image 
+                                        href="/images/procedimentos/destistica-restauradora.webp" 
+                                        class="w-full h-full"
+                                        mask="url(#mascara-mask-14)" 
+                                        preserveAspectRatio="xMidYMid slice"
+                                    />
+                                    <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                                    <g mask="url(#mascara-mask-14)">
+                                        <rect 
+                                            x="0" y="0" width="203" height="169"
+                                            fill="#14B8A6" 
+                                            fill-opacity="1"
+                                            class="transition-opacity duration-500 opacity-50 group-hover:opacity-100"
+                                        />
+                                    </g>
+                                </svg>
+                                <div class="absolute bottom-0 right-0 z-40">
+                                    <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
     
                 <!-- Setas de Navegação -->
-                <button id="prev-btn" class="absolute -left-2 sm:-left-6 top-36 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white text-teal-600 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50 procedimentos-fade-in delay-9">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
+                <div class="swiper-button-prev absolute -left-2 sm:-left-6 top-36 transform -translate-y-1/2 z-50 procedimentos-fade-in delay-9"></div>
                 
-                <button id="next-btn" class="absolute -right-2 sm:-right-6 top-36 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white text-teal-600 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50 procedimentos-fade-in delay-9">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
+                <div class="swiper-button-next absolute -right-2 sm:-right-6 top-36 transform -translate-y-1/2 z-50 procedimentos-fade-in delay-9"></div>
     
 
             </div>
@@ -912,15 +1370,15 @@ import Layout from '../layouts/Layout.astro';
             // Aplica as imagens aos slides
             slides.forEach((slide, index) => {
                 if (slide) {
-                    const imageKey = `slide${index + 1}`;
-                    slide.style.backgroundImage = `url('${currentImages[imageKey]}')`;
+                                const imageKey = `slide${index + 1}` as keyof typeof currentImages;
+            slide.style.backgroundImage = `url('${currentImages[imageKey]}')`;
                     console.log(`Slide ${index + 1} configurado com: ${currentImages[imageKey]}`);
                 }
             });
             
             let currentSlide = 0;
             const slideInterval = 5000; // 5 segundos por slide
-            let autoPlayInterval;
+            let autoPlayInterval: ReturnType<typeof setInterval> | undefined;
             
             function showSlide(slideIndex) {
                 // Esconde todos os slides
@@ -1433,142 +1891,123 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <script is:inline>
-// Script para o slider de procedimentos
+// Script para o slider de procedimentos com Swiper
 document.addEventListener('DOMContentLoaded', function() {
-            // Elementos do slider
-        const sliderContainer = document.getElementById('procedimentos-slider-container');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-        
-        if (sliderContainer && prevBtn && nextBtn) {
-            let currentSlide = 0;
-            const totalSlides = 5; // Total de cards fixo
-        
-        // Calcula a largura de cada card baseado no tamanho da tela
-        function getCardWidth() {
-            if (window.innerWidth >= 1024) { // lg
-                return 25; // 25% da largura (4 cards visíveis)
-            } else if (window.innerWidth >= 640) { // sm
-                return 50; // 50% da largura (2 cards visíveis)
-            } else {
-                return 100; // 100% da largura (1 card visível)
-            }
+    console.log('Inicializando Swiper de procedimentos...');
+    
+    // Função para inicializar o Swiper
+    function initSwiper() {
+        // Verifica se o Swiper está disponível
+        if (typeof Swiper === 'undefined') {
+            console.error('Swiper não está carregado! Tentando novamente em 500ms...');
+            setTimeout(initSwiper, 500);
+            return;
         }
         
-        // Calcula quantos cards são visíveis por tela
-        function getVisibleCards() {
-            if (window.innerWidth >= 1024) { // lg
-                return 4; // 4 cards visíveis
-            } else if (window.innerWidth >= 640) { // sm
-                return 2; // 2 cards visíveis
-            } else {
-                return 1; // 1 card visível
-            }
+        console.log('Swiper carregado com sucesso!');
+        
+        // Verifica se o elemento existe
+        const sliderElement = document.querySelector('.slider-procedimentos');
+        if (!sliderElement) {
+            console.error('Elemento .slider-procedimentos não encontrado!');
+            return;
         }
         
-        // Função para atualizar o slider
-        function updateSlider() {
-            const cardWidth = getCardWidth();
-            const visibleCards = getVisibleCards();
-            
-            // Calcula a posição de translação baseada no card atual
-            // Cada card move a quantidade correspondente à sua largura
-            let translateX = -currentSlide * cardWidth;
-            
-            // Garante que não haja espaços em branco
-            // O último card visível deve estar completamente visível
-            const maxTranslate = -(totalSlides - visibleCards) * cardWidth;
-            if (translateX < maxTranslate) {
-                translateX = maxTranslate;
-                currentSlide = totalSlides - visibleCards;
-            }
-            
-            // Aplica a transformação com transição suave
-            sliderContainer.style.transform = `translateX(${translateX}%)`;
-            
-            console.log(`Card atual: ${currentSlide + 1}/${totalSlides}, Largura: ${cardWidth}%, Translate: ${translateX}%, Max: ${maxTranslate}%, Visíveis: ${visibleCards}`);
-        }
+        console.log('Elemento do slider encontrado:', sliderElement);
         
-        // Função para ir para o próximo slide
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSlider();
-        }
-        
-        // Função para ir para o slide anterior
-        function prevSlide() {
-            currentSlide = currentSlide === 0 ? totalSlides - 1 : currentSlide - 1;
-            updateSlider();
-        }
-        
-        // Função para navegação contínua (sem parar no final)
-        function continuousNext() {
-            currentSlide++;
-            // Se passou do último card, volta ao primeiro
-            if (currentSlide >= totalSlides) {
-                currentSlide = 0;
-            }
-            updateSlider();
-        }
-        
-        function continuousPrev() {
-            currentSlide--;
-            // Se passou do primeiro card, vai para o último
-            if (currentSlide < 0) {
-                currentSlide = totalSlides - 1;
-            }
-            updateSlider();
-        }
-        
-        // Event listeners para os botões
-        prevBtn.addEventListener('click', () => {
-            console.log('Botão anterior clicado');
-            continuousPrev();
+        // Inicializa o Swiper para procedimentos
+        // @ts-ignore
+        const swiperProcedimentos = new Swiper(".slider-procedimentos", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 0,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 0,
+                },
+            },
+            on: {
+                init: function() {
+                    console.log('Swiper de procedimentos inicializado com sucesso!');
+                    console.log('Total de slides:', this.slides.length);
+                    console.log('Botões de navegação:', {
+                        next: this.navigation.nextEl,
+                        prev: this.navigation.prevEl
+                    });
+                },
+                slideChange: function() {
+                    console.log('Slide mudou para:', this.activeIndex);
+                },
+            },
         });
         
-        nextBtn.addEventListener('click', () => {
-            console.log('Botão próximo clicado');
-            continuousNext();
+        console.log('Swiper criado:', swiperProcedimentos);
+        
+        // Testa se os botões de navegação estão sendo encontrados
+        const nextButton = document.querySelector('.swiper-button-next');
+        const prevButton = document.querySelector('.swiper-button-prev');
+        
+        console.log('Botões encontrados:', {
+            next: nextButton,
+            prev: prevButton
         });
         
-        // Inicializa o slider
-        updateSlider();
-        console.log('Slider de procedimentos inicializado com sucesso!');
-        
-        // Debug: mostra informações detalhadas sobre os cards
-        function debugSlider() {
-            const cardWidth = getCardWidth();
-            const visibleCards = getVisibleCards();
-            const cards = sliderContainer.querySelectorAll('.flex-shrink-0');
-            console.log('=== DEBUG SLIDER ===');
-            console.log(`Total de cards encontrados: ${cards.length}`);
-            console.log(`Largura do card: ${cardWidth}%`);
-            console.log(`Cards visíveis por tela: ${visibleCards}`);
-            console.log(`Card atual: ${currentSlide + 1}/${totalSlides}`);
-            console.log(`Translate atual: ${-currentSlide * cardWidth}%`);
-            console.log(`Posição máxima: ${-(totalSlides - visibleCards) * cardWidth}%`);
-            console.log('===================');
+        // Testa se os botões têm os event listeners corretos
+        if (nextButton) {
+            nextButton.addEventListener('click', function() {
+                console.log('Botão próximo clicado!');
+            });
         }
         
-        // Executa debug na inicialização
-        debugSlider();
+        if (prevButton) {
+            prevButton.addEventListener('click', function() {
+                console.log('Botão anterior clicado!');
+            });
+        }
+    }
+    
+    // Tenta carregar o Swiper se não estiver disponível
+    if (typeof Swiper === 'undefined') {
+        console.log('Swiper não encontrado, tentando carregar...');
         
-        // Listener para redimensionamento da janela
-        window.addEventListener('resize', () => {
-            updateSlider();
-            debugSlider();
-        });
+        // Cria um script para carregar o Swiper
+        const swiperScript = document.createElement('script');
+        swiperScript.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+        swiperScript.onload = function() {
+            console.log('Script do Swiper carregado com sucesso!');
+            // Aguarda um pouco para garantir que o Swiper esteja disponível
+            setTimeout(initSwiper, 100);
+        };
+        swiperScript.onerror = function() {
+            console.error('Erro ao carregar o script do Swiper!');
+        };
         
-        // Auto-play opcional (descomente se quiser)
-        // setInterval(nextSlide, 5000);
+        // Adiciona o script ao head
+        document.head.appendChild(swiperScript);
         
+        // Também carrega o CSS se não estiver presente
+        if (!document.querySelector('link[href*="swiper"]')) {
+            const swiperCSS = document.createElement('link');
+            swiperCSS.rel = 'stylesheet';
+            swiperCSS.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+            document.head.appendChild(swiperCSS);
+        }
     } else {
-        console.warn('Elementos do slider de procedimentos não encontrados:', {
-            sliderContainer: !!sliderContainer,
-            prevBtn: !!prevBtn,
-            nextBtn: !!nextBtn,
-            indicators: indicators.length
-        });
+        // Swiper já está disponível
+        initSwiper();
     }
 });
 
@@ -1775,5 +2214,65 @@ document.addEventListener('DOMContentLoaded', function() {
 
 #prev-btn:hover, #next-btn:hover {
     transform: scale(1.1);
+}
+
+/* Estilos específicos para o Swiper */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #14B8A6 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s ease !important;
+    margin-top: 0 !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: white !important;
+    transform: scale(1.1) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #14B8A6 !important;
+}
+
+/* Responsividade para o slider */
+@media (max-width: 640px) {
+    .swiper-slide {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+    .swiper-slide {
+        width: 50% !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .swiper-slide {
+        width: 25% !important;
+    }
 }
 </style>
