@@ -25,173 +25,667 @@ import Layout from '../layouts/Layout.astro';
         
          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
              <!-- ODONTOPEDIATRIA -->
-             <div class='z-40 overflow-hidden relative bg-transparent transition ease-in-out delay-100 hover:bg-gradient-to-l from-cyan-100 to-teal-50 w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg hover:rotate-3 shadow-xl hover:bg-teal-50 hover:rounded-3xl'>
-                 <div class='max-w-sm mx-auto space-y-6'>
-                     <img src="/images/procedimentos/odontopediatria.webp" class='rounded-lg w-full' alt="Odontopediatria" />
-                     <div class="animate-bounce absolute w-52 h-52 bg-teal-50 rounded-full -bottom-10 -right-10 -z-10"></div>
-                     <div class="animate-bounce absolute w-32 h-32 bg-cyan-100 rounded-full -top-10 -left-10 -z-10"></div>
-                     <h3 class="text-xl font-semibold text-teal-800 mb-2">Odontopediatria</h3>
-                     <p class="text-gray-700 text-base">
-                         A Arti Kids oferece consultas cheias de afeto e uma estrutura lúdica para cultivar uma relação positiva com a saúde bucal desde cedo. Cada criança é tratada de forma personalizada, para crescer com dentes fortes e um sorriso radiante! Atendimentos a bebês, crianças, pacientes especiais e gestantes.
-                     </p>
+             <div class="w-full px-2 procedimentos-fade-in delay-1">
+                 <div class="relative group w-full mx-auto">
+                     <!-- Imagem mascarada -->
+                     <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <defs>
+                             <mask id="mascara-mask-1">
+                                 <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                             </mask>
+                         </defs>
+                         <image 
+                             href="/images/procedimentos/odontopediatriaNome.webp" 
+                             class="w-full h-full"
+                             mask="url(#mascara-mask-1)" 
+                             preserveAspectRatio="xMidYMid slice"
+                         />
+                         <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                         <g mask="url(#mascara-mask-1)">
+                             <rect 
+                                 x="0" y="0" width="203" height="169"
+                                 fill="#14B8A6" 
+                                 fill-opacity="1"
+                                 class="transition-opacity duration-500 opacity-10 group-hover:opacity-100"
+                             />
+                         </g>
+                     </svg>
+                     <div class="absolute bottom-0 right-0 z-40">
+                         <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
+                     <div class="text-left px-4">
+                         <h4 class="text-teal-800 font-bold text-lg mb-2">Odontopediatria</h4>
+                         <p class="text-teal-800/90 text-base leading-relaxed font-normal">
+                             A Arti Kids oferece consultas cheias de afeto e uma estrutura lúdica para cultivar uma relação positiva com a saúde bucal desde cedo. Cada criança é tratada de forma personalizada, para crescer com dentes fortes e um sorriso radiante! Atendimentos a bebês, crianças, pacientes especiais e gestantes.
+                         </p>
+                     </div>
                  </div>
              </div>
              <!-- CLÍNICA GERAL -->
-             <div class='z-40 overflow-hidden relative bg-transparent transition ease-in-out delay-100 hover:bg-gradient-to-l from-cyan-100 to-teal-50 w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg hover:rotate-3 shadow-xl hover:bg-teal-50 hover:rounded-3xl'>
-                 <div class='max-w-sm mx-auto space-y-6'>
-                     <img src="/images/procedimentos/clinica-geral.webp" class='rounded-lg w-full' alt="Clínica Geral" />
-                     <div class="animate-bounce absolute w-52 h-52 bg-teal-50 rounded-full -bottom-10 -right-10 -z-10"></div>
-                     <div class="animate-bounce absolute w-32 h-32 bg-cyan-100 rounded-full -top-10 -left-10 -z-10"></div>
-                     <h3 class="text-xl font-semibold text-teal-800 mb-2">Clínica Geral</h3>
-                     <p class="text-gray-700 text-base">
-                         Variedade de tratamentos e procedimentos para manter a saúde bucal, prevenir doenças e promover bem-estar. Inclui consultas de rotina, limpezas dentárias, diagnósticos e orientações preventivas para toda a família.
-                     </p>
+             <div class="w-full px-2 procedimentos-fade-in delay-2">
+                 <div class="relative group w-full mx-auto">
+                     <!-- Imagem mascarada -->
+                     <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <defs>
+                             <mask id="mascara-mask-2">
+                                 <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                             </mask>
+                         </defs>
+                         <image 
+                             href="/images/procedimentos/clinica-geralNome.webp" 
+                             class="w-full h-full"
+                             mask="url(#mascara-mask-2)" 
+                             preserveAspectRatio="xMidYMid slice"
+                         />
+                         <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                         <g mask="url(#mascara-mask-2)">
+                             <rect 
+                                 x="0" y="0" width="203" height="169"
+                                 fill="#14B8A6" 
+                                 fill-opacity="1"
+                                 class="transition-opacity duration-500 opacity-10 group-hover:opacity-100"
+                             />
+                         </g>
+                     </svg>
+                     <div class="absolute bottom-0 right-0 z-40">
+                         <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
+                     <div class="text-left px-4">
+                         <h4 class="text-teal-800 font-bold text-lg mb-2">Clínica Geral</h4>
+                         <p class="text-teal-800/90 text-base leading-relaxed font-normal">
+                             Variedade de tratamentos e procedimentos para manter a saúde bucal, prevenir doenças e promover bem-estar. Inclui consultas de rotina, limpezas dentárias, diagnósticos e orientações preventivas para toda a família.
+                         </p>
+                     </div>
                  </div>
              </div>
              <!-- CIRURGIA BUCOMAXILOFACIAL -->
-             <div class='z-40 overflow-hidden relative bg-transparent transition ease-in-out delay-100 hover:bg-gradient-to-l from-cyan-100 to-teal-50 w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg hover:rotate-3 shadow-xl hover:bg-teal-50 hover:rounded-3xl'>
-                 <div class='max-w-sm mx-auto space-y-6'>
-                     <img src="/images/procedimentos/cirurgia-bucomaxilofacial.webp" class='rounded-lg w-full' alt="Cirurgia Bucomaxilofacial" />
-                     <div class="animate-bounce absolute w-52 h-52 bg-teal-50 rounded-full -bottom-10 -right-10 -z-10"></div>
-                     <div class="animate-bounce absolute w-32 h-32 bg-cyan-100 rounded-full -top-10 -left-10 -z-10"></div>
-                     <h3 class="text-xl font-semibold text-orange-800 mb-2">Cirurgia Bucomaxilofacial</h3>
-                     <p class="text-gray-700 text-base">
-                         Tratamento cirúrgico de doenças, lesões e malformações da boca, face e região craniofacial. Inclui extrações complexas, cirurgias de terceiros molares (sisos), correção de fraturas faciais, remoção de cistos e tumores benignos, e preparação para implantes dentários.
-                     </p>
+             <div class="w-full px-2 procedimentos-fade-in delay-3">
+                 <div class="relative group w-full mx-auto">
+                     <!-- Imagem mascarada -->
+                     <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <defs>
+                             <mask id="mascara-mask-3">
+                                 <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                             </mask>
+                         </defs>
+                         <image 
+                             href="/images/procedimentos/cirurgia-bucomaxilofacialNome.webp" 
+                             class="w-full h-full"
+                             mask="url(#mascara-mask-3)" 
+                             preserveAspectRatio="xMidYMid slice"
+                         />
+                         <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                         <g mask="url(#mascara-mask-3)">
+                             <rect 
+                                 x="0" y="0" width="203" height="169"
+                                 fill="#14B8A6" 
+                                 fill-opacity="1"
+                                 class="transition-opacity duration-500 opacity-10 group-hover:opacity-100"
+                             />
+                         </g>
+                     </svg>
+                     <div class="absolute bottom-0 right-0 z-40">
+                         <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
+                     <div class="text-left px-4">
+                         <h4 class="text-orange-800 font-bold text-lg mb-2">Cirurgia Bucomaxilofacial</h4>
+                         <p class="text-orange-800/90 text-base leading-relaxed font-normal">
+                             Tratamento cirúrgico de doenças, lesões e malformações da boca, face e região craniofacial. Inclui extrações complexas, cirurgias de terceiros molares (sisos), correção de fraturas faciais, remoção de cistos e tumores benignos, e preparação para implantes dentários.
+                         </p>
+                     </div>
                  </div>
              </div>
              <!-- FISIOTERAPIA CERVICOCRANIOMANDIBULAR -->
-             <div class='z-40 overflow-hidden relative bg-transparent transition ease-in-out delay-100 hover:bg-gradient-to-l from-cyan-100 to-teal-50 w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg hover:rotate-3 shadow-xl hover:bg-teal-50 hover:rounded-3xl'>
-                 <div class='max-w-sm mx-auto space-y-6'>
-                     <img src="/images/procedimentos/fisioterapia-cervicocraniomandibular.webp" class='rounded-lg w-full' alt="Fisioterapia Cervicocraniomandibular" />
-                     <div class="animate-bounce absolute w-52 h-52 bg-teal-50 rounded-full -bottom-10 -right-10 -z-10"></div>
-                     <div class="animate-bounce absolute w-32 h-32 bg-cyan-100 rounded-full -top-10 -left-10 -z-10"></div>
-                     <h3 class="text-xl font-semibold text-cyan-800 mb-2">Fisioterapia Cervicocraniomandibular</h3>
-                     <p class="text-gray-700 text-base">
-                         Diagnóstico e tratamento de disfunções musculoesqueléticas que afetam a região da cabeça, pescoço e mandíbula, assim como os pós operatórios dessas áreas. Indicada para DTM, bruxismo, dores de cabeça relacionadas à tensão muscular e reabilitação pós-cirúrgica.
-                     </p>
+             <div class="w-full px-2 procedimentos-fade-in delay-4">
+                 <div class="relative group w-full mx-auto">
+                     <!-- Imagem mascarada -->
+                     <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <defs>
+                             <mask id="mascara-mask-4">
+                                 <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                             </mask>
+                         </defs>
+                         <image 
+                             href="/images/procedimentos/fisioterapia-cervicocraniomandibularNome.webp" 
+                             class="w-full h-full"
+                             mask="url(#mascara-mask-4)" 
+                             preserveAspectRatio="xMidYMid slice"
+                         />
+                         <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                         <g mask="url(#mascara-mask-4)">
+                             <rect 
+                                 x="0" y="0" width="203" height="169"
+                                 fill="#14B8A6" 
+                                 fill-opacity="1"
+                                 class="transition-opacity duration-500 opacity-10 group-hover:opacity-100"
+                             />
+                         </g>
+                     </svg>
+                     <div class="absolute bottom-0 right-0 z-40">
+                         <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
+                     <div class="text-left px-4">
+                         <h4 class="text-cyan-800 font-bold text-lg mb-2">Fisioterapia Cervicocraniomandibular</h4>
+                         <p class="text-cyan-800/90 text-base leading-relaxed font-normal">
+                             Diagnóstico e tratamento de disfunções musculoesqueléticas que afetam a região da cabeça, pescoço e mandíbula, assim como os pós operatórios dessas áreas. Indicada para DTM, bruxismo, dores de cabeça relacionadas à tensão muscular e reabilitação pós-cirúrgica.
+                         </p>
+                     </div>
                  </div>
              </div>
              <!-- PATOLOGIAS BUCAIS -->
-             <div class='z-40 overflow-hidden relative bg-transparent transition ease-in-out delay-100 hover:bg-gradient-to-l from-cyan-100 to-teal-50 w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg hover:rotate-3 shadow-xl hover:bg-teal-50 hover:rounded-3xl'>
-                 <div class='max-w-sm mx-auto space-y-6'>
-                     <img src="/images/procedimentos/patologias-bucais.webp" class='rounded-lg w-full' alt="Patologias Bucais" />
-                     <div class="animate-bounce absolute w-52 h-52 bg-teal-50 rounded-full -bottom-10 -right-10 -z-10"></div>
-                     <div class="animate-bounce absolute w-32 h-32 bg-cyan-100 rounded-full -top-10 -left-10 -z-10"></div>
-                     <h3 class="text-xl font-semibold text-purple-800 mb-2">Patologias Bucais</h3>
-                     <p class="text-gray-700 text-base">
-                         A estomatologia busca a prevenção, diagnóstico e tratamento das doenças que afetam a cavidade oral e estruturas relacionadas. Inclui diagnóstico precoce de lesões, biópsias, tratamento de aftas recorrentes, herpes labial, candidíase oral e outras condições que afetam a mucosa bucal.
-                     </p>
+             <div class="w-full px-2 procedimentos-fade-in delay-5">
+                 <div class="relative group w-full mx-auto">
+                     <!-- Imagem mascarada -->
+                     <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <defs>
+                             <mask id="mascara-mask-6">
+                                 <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                             </mask>
+                         </defs>
+                         <image 
+                             href="/images/procedimentos/patologias-bucaisNome.webp" 
+                             class="w-full h-full"
+                             mask="url(#mascara-mask-6)" 
+                             preserveAspectRatio="xMidYMid slice"
+                         />
+                         <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                         <g mask="url(#mascara-mask-6)">
+                             <rect 
+                                 x="0" y="0" width="203" height="169"
+                                 fill="#14B8A6" 
+                                 fill-opacity="1"
+                                 class="transition-opacity duration-500 opacity-10 group-hover:opacity-100"
+                             />
+                         </g>
+                     </svg>
+                     <div class="absolute bottom-0 right-0 z-40">
+                         <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
+                     <div class="text-left px-4">
+                         <h4 class="text-purple-800 font-bold text-lg mb-2">Patologias Bucais</h4>
+                         <p class="text-purple-800/90 text-base leading-relaxed font-normal">
+                             A estomatologia busca a prevenção, diagnóstico e tratamento das doenças que afetam a cavidade oral e estruturas relacionadas. Inclui diagnóstico precoce de lesões, biópsias, tratamento de aftas recorrentes, herpes labial, candidíase oral e outras condições que afetam a mucosa bucal.
+                         </p>
+                     </div>
                  </div>
              </div>
              <!-- LASERTERAPIA -->
-             <div class='z-40 overflow-hidden relative bg-transparent transition ease-in-out delay-100 hover:bg-gradient-to-l from-cyan-100 to-teal-50 w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg hover:rotate-3 shadow-xl hover:bg-teal-50 hover:rounded-3xl'>
-                 <div class='max-w-sm mx-auto space-y-6'>
-                     <img src="/images/procedimentos/laserterapia.webp" class='rounded-lg w-full' alt="Laserterapia" />
-                     <div class="animate-bounce absolute w-52 h-52 bg-teal-50 rounded-full -bottom-10 -right-10 -z-10"></div>
-                     <div class="animate-bounce absolute w-32 h-32 bg-cyan-100 rounded-full -top-10 -left-10 -z-10"></div>
-                     <h3 class="text-xl font-semibold text-green-800 mb-2">Laserterapia</h3>
-                     <p class="text-gray-700 text-base">
-                         Utilização de feixes de laser para regenerar tecidos, reduzir dor e inflamação e acelerar a cicatrização de aftas, extrações, implantes e herpes. Tratamento não invasivo que promove alívio imediato da dor, acelera a recuperação pós-operatória e melhora a qualidade de vida do paciente.
-                     </p>
+             <div class="w-full px-2 procedimentos-fade-in delay-6">
+                 <div class="relative group w-full mx-auto">
+                     <!-- Imagem mascarada -->
+                     <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <defs>
+                             <mask id="mascara-mask-7">
+                                 <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                             </mask>
+                         </defs>
+                         <image 
+                             href="/images/procedimentos/laserterapiaNome.webp" 
+                             class="w-full h-full"
+                             mask="url(#mascara-mask-7)" 
+                             preserveAspectRatio="xMidYMid slice"
+                         />
+                         <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                         <g mask="url(#mascara-mask-7)">
+                             <rect 
+                                 x="0" y="0" width="203" height="169"
+                                 fill="#14B8A6" 
+                                 fill-opacity="1"
+                                 class="transition-opacity duration-500 opacity-10 group-hover:opacity-100"
+                             />
+                         </g>
+                     </svg>
+                     <div class="absolute bottom-0 right-0 z-40">
+                         <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
+                     <div class="text-left px-4">
+                         <h4 class="text-green-800 font-bold text-lg mb-2">Laserterapia</h4>
+                         <p class="text-green-800/90 text-base leading-relaxed font-normal">
+                             Utilização de feixes de laser para regenerar tecidos, reduzir dor e inflamação e acelerar a cicatrização de aftas, extrações, implantes e herpes. Tratamento não invasivo que promove alívio imediato da dor, acelera a recuperação pós-operatória e melhora a qualidade de vida do paciente.
+                         </p>
+                     </div>
                  </div>
              </div>
              <!-- REABILITAÇÃO ORAL -->
-             <div class='z-40 overflow-hidden relative bg-transparent transition ease-in-out delay-100 hover:bg-gradient-to-l from-cyan-100 to-teal-50 w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg hover:rotate-3 shadow-xl hover:bg-teal-50 hover:rounded-3xl'>
-                 <div class='max-w-sm mx-auto space-y-6'>
-                     <img src="/images/procedimentos/reabilitacao-oral.webp" class='rounded-lg w-full' alt="Reabilitação Oral" />
-                     <div class="animate-bounce absolute w-52 h-52 bg-teal-50 rounded-full -bottom-10 -right-10 -z-10"></div>
-                     <div class="animate-bounce absolute w-32 h-32 bg-cyan-100 rounded-full -top-10 -left-10 -z-10"></div>
-                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Reabilitação Oral</h3>
-                     <p class="text-gray-700 text-base">
-                         Restauração da anatomia bucal, de forma a recuperar a saúde, a função e transformar a estética do sorriso. Utiliza-se uma abordagem multidisciplinar, combinando diferentes tratamentos como próteses, implantes, restaurações e cirurgias para devolver ao paciente a capacidade de mastigar, falar e sorrir com confiança.
-                     </p>
+             <div class="w-full px-2 procedimentos-fade-in delay-7">
+                 <div class="relative group w-full mx-auto">
+                     <!-- Imagem mascarada -->
+                     <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <defs>
+                             <mask id="mascara-mask-8">
+                                 <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                             </mask>
+                         </defs>
+                         <image 
+                             href="/images/procedimentos/reabilitacao-oralNome.webp" 
+                             class="w-full h-full"
+                             mask="url(#mascara-mask-8)" 
+                             preserveAspectRatio="xMidYMid slice"
+                         />
+                         <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                         <g mask="url(#mascara-mask-8)">
+                             <rect 
+                                 x="0" y="0" width="203" height="169"
+                                 fill="#14B8A6" 
+                                 fill-opacity="1"
+                                 class="transition-opacity duration-500 opacity-10 group-hover:opacity-100"
+                             />
+                         </g>
+                     </svg>
+                     <div class="absolute bottom-0 right-0 z-40">
+                         <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
+                     <div class="text-left px-4">
+                         <h4 class="text-gray-800 font-bold text-lg mb-2">Reabilitação Oral</h4>
+                         <p class="text-gray-800/90 text-base leading-relaxed font-normal">
+                             Restauração da anatomia bucal, de forma a recuperar a saúde, a função e transformar a estética do sorriso. Utiliza-se uma abordagem multidisciplinar, combinando diferentes tratamentos como próteses, implantes, restaurações e cirurgias para devolver ao paciente a capacidade de mastigar, falar e sorrir com confiança.
+                         </p>
+                     </div>
                  </div>
              </div>
              <!-- ENDODONTIA -->
-             <div class='z-40 overflow-hidden relative bg-transparent transition ease-in-out delay-100 hover:bg-gradient-to-l from-cyan-100 to-teal-50 w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg hover:rotate-3 shadow-xl hover:bg-teal-50 hover:rounded-3xl'>
-                 <div class='max-w-sm mx-auto space-y-6'>
-                     <img src="/images/procedimentos/endodontia.webp" class='rounded-lg w-full' alt="Endodontia" />
-                     <div class="animate-bounce absolute w-52 h-52 bg-teal-50 rounded-full -bottom-10 -right-10 -z-10"></div>
-                     <div class="animate-bounce absolute w-32 h-32 bg-cyan-100 rounded-full -top-10 -left-10 -z-10"></div>
-                     <h3 class="text-xl font-semibold text-lime-800 mb-2">Endodontia</h3>
-                     <p class="text-gray-700 text-base">
-                         Tratamento de doenças e lesões da polpa dental e dos canais radiculares com o objetivo de cessar a dor e preservar os tecidos. Popularmente conhecido como "tratamento de canal", remove a infecção do interior do dente, alivia a dor intensa e permite a manutenção do dente natural na boca.
-                     </p>
+             <div class="w-full px-2 procedimentos-fade-in delay-9">
+                 <div class="relative group w-full mx-auto">
+                     <!-- Imagem mascarada -->
+                     <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <defs>
+                             <mask id="mascara-mask-9">
+                                 <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                             </mask>
+                         </defs>
+                         <image 
+                             href="/images/procedimentos/endodontiaNome.webp" 
+                             class="w-full h-full"
+                             mask="url(#mascara-mask-9)" 
+                             preserveAspectRatio="xMidYMid slice"
+                         />
+                         <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                         <g mask="url(#mascara-mask-9)">
+                             <rect 
+                                 x="0" y="0" width="203" height="169"
+                                 fill="#14B8A6" 
+                                 fill-opacity="1"
+                                 class="transition-opacity duration-500 opacity-10 group-hover:opacity-100"
+                             />
+                         </g>
+                     </svg>
+                     <div class="absolute bottom-0 right-0 z-40">
+                         <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
+                     <div class="text-left px-4">
+                         <h4 class="text-lime-800 font-bold text-lg mb-2">Endodontia</h4>
+                         <p class="text-lime-800/90 text-base leading-relaxed font-normal">
+                             Tratamento de doenças e lesões da polpa dental e dos canais radiculares com o objetivo de cessar a dor e preservar os tecidos. Popularmente conhecido como "tratamento de canal", remove a infecção do interior do dente, alivia a dor intensa e permite a manutenção do dente natural na boca.
+                         </p>
+                     </div>
                  </div>
              </div>
              <!-- ORTODONTIA FIXA -->
-             <div class='z-40 overflow-hidden relative bg-transparent transition ease-in-out delay-100 hover:bg-gradient-to-l from-cyan-100 to-teal-50 w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg hover:rotate-3 shadow-xl hover:bg-teal-50 hover:rounded-3xl'>
-                 <div class='max-w-sm mx-auto space-y-6'>
-                     <img src="/images/procedimentos/ortodontia-fixa.webp" class='rounded-lg w-full' alt="Ortodontia Fixa" />
-                     <div class="animate-bounce absolute w-52 h-52 bg-teal-50 rounded-full -bottom-10 -right-10 -z-10"></div>
-                     <div class="animate-bounce absolute w-32 h-32 bg-cyan-100 rounded-full -top-10 -left-10 -z-10"></div>
-                     <h3 class="text-xl font-semibold text-teal-800 mb-2">Ortodontia Fixa</h3>
-                     <p class="text-gray-700 text-base">
-                         Correção da posição dos dentes, alinhamento de mordida e sua relação com as bases ósseas, através de aparelhos fixos, brackets e fios metálicos, para melhorar a estética e a função dental. Tratamento que proporciona um sorriso harmônico e melhora a mastigação, fonação e respiração.
-                     </p>
+             <div class="w-full px-2 procedimentos-fade-in delay-10">
+                 <div class="relative group w-full mx-auto">
+                     <!-- Imagem mascarada -->
+                     <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <defs>
+                             <mask id="mascara-mask-10">
+                                 <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                             </mask>
+                         </defs>
+                         <image 
+                             href="/images/procedimentos/ortodontia-fixaNome.webp" 
+                             class="w-full h-full"
+                             mask="url(#mascara-mask-10)" 
+                             preserveAspectRatio="xMidYMid slice"
+                         />
+                         <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                         <g mask="url(#mascara-mask-10)">
+                             <rect 
+                                 x="0" y="0" width="203" height="169"
+                                 fill="#14B8A6" 
+                                 fill-opacity="1"
+                                 class="transition-opacity duration-500 opacity-10 group-hover:opacity-100"
+                             />
+                         </g>
+                     </svg>
+                     <div class="absolute bottom-0 right-0 z-40">
+                         <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
+                     <div class="text-left px-4">
+                         <h4 class="text-teal-800 font-bold text-lg mb-2">Ortodontia Fixa</h4>
+                         <p class="text-teal-800/90 text-base leading-relaxed font-normal">
+                             Correção da posição dos dentes, alinhamento de mordida e sua relação com as bases ósseas, através de aparelhos fixos, brackets e fios metálicos, para melhorar a estética e a função dental. Tratamento que proporciona um sorriso harmônico e melhora a mastigação, fonação e respiração.
+                         </p>
+                     </div>
                  </div>
              </div>
              <!-- PRÓTESE DENTÁRIA -->
-             <div class='z-40 overflow-hidden relative bg-transparent transition ease-in-out delay-100 hover:bg-gradient-to-l from-cyan-100 to-teal-50 w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg hover:rotate-3 shadow-xl hover:bg-teal-50 hover:rounded-3xl'>
-                 <div class='max-w-sm mx-auto space-y-6'>
-                     <img src="/images/procedimentos/protese-dentaria.webp" class='rounded-lg w-full' alt="Prótese Dentária" />
-                     <div class="animate-bounce absolute w-52 h-52 bg-teal-50 rounded-full -bottom-10 -right-10 -z-10"></div>
-                     <div class="animate-bounce absolute w-32 h-32 bg-cyan-100 rounded-full -top-10 -left-10 -z-10"></div>
-                     <h3 class="text-xl font-semibold text-orange-800 mb-2">Prótese Dentária</h3>
-                     <p class="text-gray-700 text-base">
-                         Reabilitação de dentes perdidos ou danificados usando dispositivos protéticos, como facetas, coroas, próteses parciais removíveis, totais, fixas, sobre implantes. Restaura-se a função mastigatória, a estética do sorriso e a autoestima do paciente, devolvendo qualidade de vida e confiança.
-                     </p>
+             <div class="w-full px-2 procedimentos-fade-in delay-11">
+                 <div class="relative group w-full mx-auto">
+                     <!-- Imagem mascarada -->
+                     <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <defs>
+                             <mask id="mascara-mask-11">
+                                 <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                             </mask>
+                         </defs>
+                         <image 
+                             href="/images/procedimentos/protese-dentariaNome.webp" 
+                             class="w-full h-full"
+                             mask="url(#mascara-mask-11)" 
+                             preserveAspectRatio="xMidYMid slice"
+                         />
+                         <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                         <g mask="url(#mascara-mask-11)">
+                             <rect 
+                                 x="0" y="0" width="203" height="169"
+                                 fill="#14B8A6" 
+                                 fill-opacity="1"
+                                 class="transition-opacity duration-500 opacity-10 group-hover:opacity-100"
+                             />
+                         </g>
+                     </svg>
+                     <div class="absolute bottom-0 right-0 z-40">
+                         <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
+                     <div class="text-left px-4">
+                         <h4 class="text-orange-800 font-bold text-lg mb-2">Prótese Dentária</h4>
+                         <p class="text-orange-800/90 text-base leading-relaxed font-normal">
+                             Reabilitação de dentes perdidos ou danificados usando dispositivos protéticos, como facetas, coroas, próteses parciais removíveis, totais, fixas, sobre implantes. Restaura-se a função mastigatória, a estética do sorriso e a autoestima do paciente, devolvendo qualidade de vida e confiança.
+                         </p>
+                     </div>
                  </div>
              </div>
              <!-- IMPLANTODONTIA -->
-             <div class='z-40 overflow-hidden relative bg-transparent transition ease-in-out delay-100 hover:bg-gradient-to-l from-cyan-100 to-teal-50 w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg hover:rotate-3 shadow-xl hover:bg-teal-50 hover:rounded-3xl'>
-                 <div class='max-w-sm mx-auto space-y-6'>
-                     <img src="/images/procedimentos/implantodontia.webp" class='rounded-lg w-full' alt="Implantodontia" />
-                     <div class="animate-bounce absolute w-52 h-52 bg-teal-50 rounded-full -bottom-10 -right-10 -z-10"></div>
-                     <div class="animate-bounce absolute w-32 h-32 bg-cyan-100 rounded-full -top-10 -left-10 -z-10"></div>
-                     <h3 class="text-xl font-semibold text-green-800 mb-2">Implantodontia</h3>
-                     <p class="text-gray-700 text-base">
-                         Colocação de implantes dentários para substituir dentes perdidos, proporcionando uma base sólida para próteses. Promove a reabilitação oral, melhorando a função mastigatória e a estética do sorriso. Os implantes oferecem estabilidade e durabilidade superiores às próteses convencionais, preservando o osso alveolar.
-                     </p>
+             <div class="w-full px-2 procedimentos-fade-in delay-12">
+                 <div class="relative group w-full mx-auto">
+                     <!-- Imagem mascarada -->
+                     <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <defs>
+                             <mask id="mascara-mask-12">
+                                 <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                             </mask>
+                         </defs>
+                         <image 
+                             href="/images/procedimentos/implantodontiaNome.webp" 
+                             class="w-full h-full"
+                             mask="url(#mascara-mask-12)" 
+                             preserveAspectRatio="xMidYMid slice"
+                         />
+                         <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                         <g mask="url(#mascara-mask-12)">
+                             <rect 
+                                 x="0" y="0" width="203" height="169"
+                                 fill="#14B8A6" 
+                                 fill-opacity="1"
+                                 class="transition-opacity duration-500 opacity-10 group-hover:opacity-100"
+                             />
+                         </g>
+                     </svg>
+                     <div class="absolute bottom-0 right-0 z-40">
+                         <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
+                     <div class="text-left px-4">
+                         <h4 class="text-green-800 font-bold text-lg mb-2">Implantodontia</h4>
+                         <p class="text-green-800/90 text-base leading-relaxed font-normal">
+                             Colocação de implantes dentários para substituir dentes perdidos, proporcionando uma base sólida para próteses. Promove a reabilitação oral, melhorando a função mastigatória e a estética do sorriso. Os implantes oferecem estabilidade e durabilidade superiores às próteses convencionais, preservando o osso alveolar.
+                         </p>
+                     </div>
                  </div>
              </div>
              <!-- ALINHADOR ORTODÔNTICO -->
-             <div class='z-40 overflow-hidden relative bg-transparent transition ease-in-out delay-100 hover:bg-gradient-to-l from-cyan-100 to-teal-50 w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg hover:rotate-3 shadow-xl hover:bg-teal-50 hover:rounded-3xl'>
-                 <div class='max-w-sm mx-auto space-y-6'>
-                     <img src="/images/procedimentos/alinhador-ortodontico.webp" class='rounded-lg w-full' alt="Alinhador Ortodôntico" />
-                     <div class="animate-bounce absolute w-52 h-52 bg-teal-50 rounded-full -bottom-10 -right-10 -z-10"></div>
-                     <div class="animate-bounce absolute w-32 h-32 bg-cyan-100 rounded-full -top-10 -left-10 -z-10"></div>
-                     <h3 class="text-xl font-semibold text-purple-800 mb-2">Alinhador Ortodôntico</h3>
-                     <p class="text-gray-700 text-base">
-                         Correção da posição dos dentes através de dispositivos transparentes e removíveis discretos e confortáveis, substituindo os aparelhos ortodônticos tradicionais. Tratamento moderno que permite higienização adequada, maior conforto durante o uso e resultados estéticos superiores durante o período de tratamento.
-                     </p>
+             <div class="w-full px-2 procedimentos-fade-in delay-13">
+                 <div class="relative group w-full mx-auto">
+                     <!-- Imagem mascarada -->
+                     <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <defs>
+                             <mask id="mascara-mask-13">
+                                 <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                             </mask>
+                         </defs>
+                         <image 
+                             href="/images/procedimentos/alinhador-ortodonticoNome.webp" 
+                             class="w-full h-full"
+                             mask="url(#mascara-mask-13)" 
+                             preserveAspectRatio="xMidYMid slice"
+                         />
+                         <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                         <g mask="url(#mascara-mask-13)">
+                             <rect 
+                                 x="0" y="0" width="203" height="169"
+                                 fill="#14B8A6" 
+                                 fill-opacity="1"
+                                 class="transition-opacity duration-500 opacity-10 group-hover:opacity-100"
+                             />
+                         </g>
+                     </svg>
+                     <div class="absolute bottom-0 right-0 z-40">
+                         <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
+                     <div class="text-left px-4">
+                         <h4 class="text-purple-800 font-bold text-lg mb-2">Alinhador Ortodôntico</h4>
+                         <p class="text-purple-800/90 text-base leading-relaxed font-normal">
+                             Correção da posição dos dentes através de dispositivos transparentes e removíveis discretos e confortáveis, substituindo os aparelhos ortodônticos tradicionais. Tratamento moderno que permite higienização adequada, maior conforto durante o uso e resultados estéticos superiores durante o período de tratamento.
+                         </p>
+                     </div>
                  </div>
              </div>
              <!-- PERIODONTIA -->
-             <div class='z-40 overflow-hidden relative bg-transparent transition ease-in-out delay-100 hover:bg-gradient-to-l from-cyan-100 to-teal-50 w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg hover:rotate-3 shadow-xl hover:bg-teal-50 hover:rounded-3xl'>
-                 <div class='max-w-sm mx-auto space-y-6'>
-                     <img src="/images/procedimentos/periodontia.webp" class='rounded-lg w-full' alt="Periodontia" />
-                     <div class="animate-bounce absolute w-52 h-52 bg-teal-50 rounded-full -bottom-10 -right-10 -z-10"></div>
-                     <div class="animate-bounce absolute w-32 h-32 bg-cyan-100 rounded-full -top-10 -left-10 -z-10"></div>
-                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Periodontia</h3>
-                     <p class="text-gray-700 text-base">
-                         Prevenção, diagnóstico e tratamento de doenças das gengivas e dos tecidos de suporte dos dentes, como gengivite e periodontite. Tratamentos cirúrgicos para a melhora da estética gengival. Inclui limpezas profundas, raspagem, alisamento radicular e cirurgias gengivais para manter a saúde periodontal e prevenir a perda dentária.
-                     </p>
+             <div class="w-full px-2 procedimentos-fade-in delay-14">
+                 <div class="relative group w-full mx-auto">
+                     <!-- Imagem mascarada -->
+                     <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <defs>
+                             <mask id="mascara-mask-14">
+                                 <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                             </mask>
+                         </defs>
+                         <image 
+                             href="/images/procedimentos/periodontiaNome.webp" 
+                             class="w-full h-full"
+                             mask="url(#mascara-mask-14)" 
+                             preserveAspectRatio="xMidYMid slice"
+                         />
+                         <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                         <g mask="url(#mascara-mask-14)">
+                             <rect 
+                                 x="0" y="0" width="203" height="169"
+                                 fill="#14B8A6" 
+                                 fill-opacity="1"
+                                 class="transition-opacity duration-500 opacity-10 group-hover:opacity-100"
+                             />
+                         </g>
+                     </svg>
+                     <div class="absolute bottom-0 right-0 z-40">
+                         <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
+                     <div class="text-left px-4">
+                         <h4 class="text-gray-800 font-bold text-lg mb-2">Periodontia</h4>
+                         <p class="text-gray-800/90 text-base leading-relaxed font-normal">
+                             Prevenção, diagnóstico e tratamento de doenças das gengivas e dos tecidos de suporte dos dentes, como gengivite e periodontite. Tratamentos cirúrgicos para a melhora da estética gengival. Inclui limpezas profundas, raspagem, alisamento radicular e cirurgias gengivais para manter a saúde periodontal e prevenir a perda dentária.
+                         </p>
+                     </div>
                  </div>
              </div>
              <!-- DENTÍSTICA RESTAURADORA -->
-             <div class='z-40 overflow-hidden relative bg-transparent transition ease-in-out delay-100 hover:bg-gradient-to-l from-cyan-100 to-teal-50 w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg hover:rotate-3 shadow-xl hover:bg-teal-50 hover:rounded-3xl'>
-                 <div class='max-w-sm mx-auto space-y-6'>
-                     <img src="/images/procedimentos/destistica-restauradora.webp" class='rounded-lg w-full' alt="Dentística Restauradora" />
-                     <div class="animate-bounce absolute w-52 h-52 bg-teal-50 rounded-full -bottom-10 -right-10 -z-10"></div>
-                     <div class="animate-bounce absolute w-32 h-32 bg-cyan-100 rounded-full -top-10 -left-10 -z-10"></div>
-                     <h3 class="text-xl font-semibold text-lime-800 mb-2">Dentística Restauradora</h3>
-                     <p class="text-gray-700 text-base">
-                         Devolução da estética e função dental, a partir de reparo e restauração de dentes danificados por fraturas, desgastes ou cáries. São utilizados materiais avançados como resinas e porcelanas para criar restaurações que imitam a aparência natural dos dentes, proporcionando resultados duradouros e esteticamente superiores.
-                     </p>
+             <div class="w-full px-2 procedimentos-fade-in delay-15">
+                 <div class="relative group w-full mx-auto">
+                     <!-- Imagem mascarada -->
+                     <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <defs>
+                             <mask id="mascara-mask-15">
+                                 <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                             </mask>
+                         </defs>
+                         <image 
+                             href="/images/procedimentos/destistica-restauradoraNome.webp" 
+                             class="w-full h-full"
+                             mask="url(#mascara-mask-15)" 
+                             preserveAspectRatio="xMidYMid slice"
+                         />
+                         <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                         <g mask="url(#mascara-mask-15)">
+                             <rect 
+                                 x="0" y="0" width="203" height="169"
+                                 fill="#14B8A6" 
+                                 fill-opacity="1"
+                                 class="transition-opacity duration-500 opacity-10 group-hover:opacity-100"
+                             />
+                         </g>
+                     </svg>
+                     <div class="absolute bottom-0 right-0 z-40">
+                         <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
+                     <div class="text-left px-4">
+                         <h4 class="text-lime-800 font-bold text-lg mb-2">Dentística Restauradora</h4>
+                         <p class="text-lime-800/90 text-base leading-relaxed font-normal">
+                             Devolução da estética e função dental, a partir de reparo e restauração de dentes danificados por fraturas, desgastes ou cáries. São utilizados materiais avançados como resinas e porcelanas para criar restaurações que imitam a aparência natural dos dentes, proporcionando resultados duradouros e esteticamente superiores.
+                         </p>
+                     </div>
                  </div>
              </div>
+
+            <!-- Card: Patologias Bucais -->
+            <div class="w-full px-2 procedimentos-fade-in delay-8">
+                <div class="relative group w-full mx-auto">
+                    <!-- Imagem mascarada -->
+                    <svg class="w-full h-full" viewBox="0 0 203 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <mask id="mascara-mask-5">
+                                <path d="M0 149C0 160.046 8.95431 169 20 169H144.5C155.27 169 164 160.27 164 149.5V149.5C164 138.73 172.73 130 183.5 130V130C194.27 130 203 121.27 203 110.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V149Z" fill="#D9D9D9"/>
+                            </mask>
+                        </defs>
+                        <image 
+                            href="/images/procedimentos/patologias-bucaisNome.webp" 
+                            class="w-full h-full"
+                            mask="url(#mascara-mask-5)" 
+                            preserveAspectRatio="xMidYMid slice"
+                        />
+                        <!-- Div animada sobre a imagem, com o mesmo formato da máscara -->
+                        <g mask="url(#mascara-mask-5)">
+                            <rect 
+                                x="0" y="0" width="203" height="169"
+                                fill="#14B8A6" 
+                                fill-opacity="1"
+                                class="transition-opacity duration-500 opacity-10 group-hover:opacity-100"
+                            />
+                        </g>
+                    </svg>
+                    <div class="absolute bottom-0 right-0 z-40">
+                        <div class="flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-12" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 19L19 5M19 5H7M19 5V17" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
+                    <div class="text-left px-4">
+                        <h4 class="text-teal-800 font-bold text-lg mb-2">Patologias Bucais</h4>
+                        <p class="text-teal-800/90 text-base leading-relaxed font-normal">
+                            A estomatologia busca a prevenção, diagnóstico e tratamento das doenças que afetam a cavidade oral e estruturas relacionadas. Inclui diagnóstico precoce de lesões, biópsias, tratamento de aftas recorrentes, herpes labial, candidíase oral e outras condições que afetam a mucosa bucal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
          </div>
      </div>
  </section>
