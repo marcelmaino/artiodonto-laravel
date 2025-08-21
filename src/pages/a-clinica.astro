@@ -103,77 +103,12 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </section>
 
-    <!-- Nossa Equipe -->
-    <section class="py-16 bg-white hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Nossa Equipe
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Conheça os profissionais especializados que fazem parte da nossa equipe e estão prontos para cuidar do seu sorriso.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="bg-teal-100 h-48 flex items-center justify-center">
-                        <div class="text-6xl">👨‍⚕️</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Dr. João Silva</h3>
-                        <p class="text-teal-600 font-semibold mb-2">Cirurgiã-Dentista</p>
-                        <p class="text-gray-600 mb-4">
-                            Especialista em ortodontia e implantes com mais de 15 anos de experiência.
-                        </p>
-                        <div class="flex space-x-2">
-                            <span class="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded">Ortodontia</span>
-                            <span class="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded">Implantes</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="bg-teal-100 h-48 flex items-center justify-center">
-                        <div class="text-6xl">👩‍⚕️</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Dra. Maria Santos</h3>
-                        <p class="text-teal-600 font-semibold mb-2">Cirurgiã-Dentista</p>
-                        <p class="text-gray-600 mb-4">
-                            Especialista em odontopediatria e endodontia com foco em tratamentos preventivos.
-                        </p>
-                        <div class="flex space-x-2">
-                            <span class="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded">Odontopediatria</span>
-                            <span class="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded">Endodontia</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="bg-teal-100 h-48 flex items-center justify-center">
-                        <div class="text-6xl">👨‍⚕️</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Dr. Carlos Oliveira</h3>
-                        <p class="text-teal-600 font-semibold mb-2">Cirurgiã-Dentista</p>
-                        <p class="text-gray-600 mb-4">
-                            Especialista em periodontia e estética dental com técnicas modernas de tratamento.
-                        </p>
-                        <div class="flex space-x-2">
-                            <span class="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded">Periodontia</span>
-                            <span class="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded">Estética</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Nossas Instalações -->
     <section class="py-16 bg-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
+            <div class="text-center mb-12 hidden">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                     Nossas Instalações
                 </h2>
@@ -182,96 +117,7 @@ import Layout from '../layouts/Layout.astro';
                 </p>
             </div>
             
-            <!-- Consultórios e Salas Especializadas -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-                <div class="space-y-8">
-                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-teal-100 w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <div class="text-2xl">🦷</div>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-3">Consultórios Principais</h3>
-                                <p class="text-gray-600 leading-relaxed">
-                                    Nossos 6 consultórios são equipados com cadeiras odontológicas ergonômicas, 
-                                    iluminação LED de alta precisão e sistemas de sucção avançados. Cada espaço 
-                                    é climatizado e possui isolamento acústico para garantir conforto e privacidade.
-                                </p>
-                                <div class="mt-4 flex flex-wrap gap-2">
-                                    <span class="bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-sm">Cadeiras Ergonômicas</span>
-                                    <span class="bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-sm">Iluminação LED</span>
-                                    <span class="bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-sm">Climatização</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-teal-100 w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <div class="text-2xl">👶</div>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-3">Consultório Arti Kids</h3>
-                                <p class="text-gray-600 leading-relaxed">
-                                    Espaço exclusivo para crianças com decoração lúdica, brinquedos educativos 
-                                    e equipamentos específicos para odontopediatria. O ambiente é projetado 
-                                    para tornar a experiência divertida e sem traumas.
-                                </p>
-                                <div class="mt-4 flex flex-wrap gap-2">
-                                    <span class="bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-sm">Decoração Lúdica</span>
-                                    <span class="bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-sm">Brinquedos Educativos</span>
-                                    <span class="bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-sm">Equipamentos Específicos</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="space-y-8">
-                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-purple-100 w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <div class="text-2xl">🧪</div>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-3">Laboratório Próprio</h3>
-                                <p class="text-gray-600 leading-relaxed">
-                                    Laboratório completo com equipamentos de última geração para confecção 
-                                    de próteses, coroas e facetas. Nossa equipe técnica especializada 
-                                    garante qualidade e rapidez em todos os trabalhos.
-                                </p>
-                                <div class="mt-4 flex flex-wrap gap-2">
-                                    <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm">Equipamentos Modernos</span>
-                                    <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm">Equipe Especializada</span>
-                                    <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm">Qualidade Garantida</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-green-100 w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <div class="text-2xl">📷</div>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-3">Centro de Imagem</h3>
-                                <p class="text-gray-600 leading-relaxed">
-                                    Sala de radiologia digital com equipamentos de baixa radiação e 
-                                    tomografia computadorizada. Realizamos todos os exames necessários 
-                                    para diagnóstico preciso e planejamento de tratamentos.
-                                </p>
-                                <div class="mt-4 flex flex-wrap gap-2">
-                                    <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">Radiologia Digital</span>
-                                    <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">Tomografia</span>
-                                    <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">Baixa Radiação</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+ 
 
             <!-- Recursos Adicionais -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
