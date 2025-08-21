@@ -1485,52 +1485,92 @@ import Layout from '../layouts/Layout.astro';
  
     
     
-    
+        <!-- Imagens da clínica -->
         <div class="container mx-auto max-w-5xl">
           <div class="flex flex-wrap items-center justify-between p-3 md:p-0">
             <div class="w-full lg:w-6/12">
               <div class="flex items-center">
                 <div class="w-full px-3 sm:px-4 xl:w-1/2">
                   <div class="py-3 sm:py-4 fade-on-scroll opacity-0" data-fade-delay="200">
-                    <!-- Imagem mascarada -->
-                    <svg class="w-full" viewBox="0 0 203 235" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <mask id="mascara-mask-e1">
-                                <path d="M0 214C0 225.046 8.95431 234 20 234H144.5C155.27 234 164 225.27 164 214.5V214.5C164 203.73 172.73 195 183.5 195V195C194.27 195 203 186.27 203 175.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V214Z" fill="#ffffff"/>
-                            </mask>
-                        </defs>
-                        <image 
-                            href="/images/empresa01.jpg" 
-                            class="w-full max-h-[275px]"
-                            mask="url(#mascara-mask-e1)" 
-                            preserveAspectRatio="xMidYMid slice"
-                        />
-                    </svg>
+                    <!-- Slider 1 - 3 imagens com máscara SVG -->
+                    <div class="relative w-full h-[275px] overflow-hidden">
+                      <svg class="w-full absolute inset-0" viewBox="0 0 203 235" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <defs>
+                              <mask id="mascara-mask-e1">
+                                  <path d="M0 214C0 225.046 8.95431 234 20 234H144.5C155.27 234 164 225.27 164 214.5V214.5C164 203.73 172.73 195 183.5 195V195C194.27 195 203 186.27 203 175.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V214Z" fill="#ffffff"/>
+                              </mask>
+                          </defs>
+                          <image 
+                              id="slider-1-img-1"
+                              href="/images/empresa01.jpg" 
+                              class="w-full max-h-[275px] absolute inset-0 transition-opacity duration-1000"
+                              mask="url(#mascara-mask-e1)" 
+                              preserveAspectRatio="xMidYMid slice"
+                          />
+                          <image 
+                              id="slider-1-img-2"
+                              href="/images/empresa02.jpg" 
+                              class="w-full max-h-[275px] absolute inset-0 transition-opacity duration-1000 opacity-0"
+                              mask="url(#mascara-mask-e1)" 
+                              preserveAspectRatio="xMidYMid slice"
+                          />
+                          <image 
+                              id="slider-1-img-3"
+                              href="/images/empresa03.jpg" 
+                              class="w-full max-h-[275px] absolute inset-0 transition-opacity duration-1000 opacity-0"
+                              mask="url(#mascara-mask-e1)" 
+                              preserveAspectRatio="xMidYMid slice"
+                          />
+                      </svg>
+                    </div>
                   </div>
                   <div class="py-3 sm:py-4 fade-on-scroll opacity-0" data-fade-delay="300">
-                    <!-- Imagem mascarada -->
-                    <svg class="w-full" viewBox="0 0 203 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <mask id="mascara-mask-e2">
-                                <path d="M0 214C0 225.046 8.95431 234 20 234H144.5C155.27 234 164 225.27 164 214.5V214.5C164 203.73 172.73 195 183.5 195V195C194.27 195 203 186.27 203 175.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V214Z" fill="#ffffff"/>
-                            </mask>
-                        </defs>
-                        <image 
-                            href="/images/empresa02.jpg" 
-                            class="w-full max-h-[275px]"
-                            mask="url(#mascara-mask-e2)" 
-                            preserveAspectRatio="xMidYMid slice"
-                        />
-                    </svg>
+                    <!-- Slider 2 - 3 imagens com máscara SVG -->
+                    <div class="relative w-full h-[275px] overflow-hidden">
+                      <svg class="w-full absolute inset-0" viewBox="0 0 203 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <defs>
+                              <mask id="mascara-mask-e2">
+                                  <path d="M0 214C0 225.046 8.95431 234 20 234H144.5C155.27 234 164 225.27 164 214.5V214.5C164 203.73 172.73 195 183.5 195V195C194.27 195 203 186.27 203 175.5V20C203 8.9543 194.046 0 183 0H20C8.95431 0 0 8.95431 0 20V214Z" fill="#ffffff"/>
+                              </mask>
+                          </defs>
+                          <image 
+                              id="slider-2-img-1"
+                              href="/images/empresa04.jpg" 
+                              class="w-full max-h-[275px] absolute inset-0 transition-opacity duration-1000"
+                              mask="url(#mascara-mask-e2)" 
+                              preserveAspectRatio="xMidYMid slice"
+                          />
+                          <image 
+                              id="slider-2-img-2"
+                              href="/images/empresa05.jpg" 
+                              class="w-full max-h-[275px] absolute inset-0 transition-opacity duration-1000 opacity-0"
+                              mask="url(#mascara-mask-e2)" 
+                              preserveAspectRatio="xMidYMid slice"
+                          />
+                          <image 
+                              id="slider-2-img-3"
+                              href="/images/empresa06.jpg" 
+                              class="w-full max-h-[275px] absolute inset-0 transition-opacity duration-1000 opacity-0"
+                              mask="url(#mascara-mask-e2)" 
+                              preserveAspectRatio="xMidYMid slice"
+                          />
+                      </svg>
+                    </div>
                   </div>
                 </div>
                 <div class="w-full px-3 sm:px-4 xl:w-1/2">
                   <div class="relative z-10 my-4 fade-on-scroll opacity-0" data-fade-delay="400">
-                    <img src="/images/empresa03.jpg" alt=""
-                      class="w-full rounded-2xl" />
+                    <!-- Slider 3 - 3 imagens sem máscara -->
+                    <div class="relative w-full h-[275px] overflow-hidden rounded-2xl">
+                      <img id="slider-3-img-1" src="/images/empresa07.jpg" alt=""
+                        class="w-full h-full object-cover absolute inset-0 transition-opacity duration-1000" />
+                      <img id="slider-3-img-2" src="/images/empresa08.jpg" alt=""
+                        class="w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 opacity-0" />
+                      <img id="slider-3-img-3" src="/images/empresa09.jpg" alt=""
+                        class="w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 opacity-0" />
+                    </div>
                     <span class="absolute -bottom-7 right-0 lg:-right-7 z-[-1]">
                       <svg width="134" height="106" viewBox="0 0 134 106" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- ... (SVG circles remain unchanged) ... -->
                         <circle cx="1.66667" cy="104" r="1.66667" transform="rotate(-90 1.66667 104)" fill="#0d796d" />
                         <circle cx="16.3333" cy="104" r="1.66667" transform="rotate(-90 16.3333 104)" fill="#0d796d" />
                         <circle cx="31" cy="104" r="1.66667" transform="rotate(-90 31 104)" fill="#0d796d" />
@@ -1684,6 +1724,113 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
         </div>
+
+        <!-- Script para sliders com imagens em sequência -->
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            // Array com todas as imagens disponíveis
+            const imagens = [
+              'empresa01.jpg', 'empresa02.jpg', 'empresa03.jpg', 'empresa04.jpg', 'empresa05.jpg',
+              'empresa06.jpg', 'empresa07.jpg', 'empresa08.jpg', 'empresa09.jpg', 'empresa10.jpg', 'empresa11.jpg'
+            ];
+            
+            // Função para embaralhar array (Fisher-Yates shuffle)
+            function embaralharArray(array) {
+              const novoArray = [...array];
+              for (let i = novoArray.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [novoArray[i], novoArray[j]] = [novoArray[j], novoArray[i]];
+              }
+              return novoArray;
+            }
+            
+            // Embaralhar todas as imagens e distribuir entre os sliders
+            const imagensEmbaralhadas = embaralharArray(imagens);
+            
+            // Distribuir as imagens: 4 para o primeiro, 4 para o segundo, 3 para o terceiro
+            const grupo1 = imagensEmbaralhadas.slice(0, 4); // 4 imagens
+            const grupo2 = imagensEmbaralhadas.slice(4, 8); // 4 imagens  
+            const grupo3 = imagensEmbaralhadas.slice(8, 11); // 3 imagens
+            
+            // Aplicar imagens aos sliders
+            function aplicarImagensSlider(sliderId, grupo) {
+              const img1 = document.getElementById(`${sliderId}-img-1`);
+              const img2 = document.getElementById(`${sliderId}-img-2`);
+              const img3 = document.getElementById(`${sliderId}-img-3`);
+              
+              if (img1 && img2 && img3) {
+                img1.setAttribute('href', `/images/${grupo[0]}`);
+                img2.setAttribute('href', `/images/${grupo[1]}`);
+                img3.setAttribute('href', `/images/${grupo[2]}`);
+              }
+            }
+            
+            // Aplicar imagens aos sliders 1 e 2 (SVG)
+            aplicarImagensSlider('slider-1', grupo1);
+            aplicarImagensSlider('slider-2', grupo2);
+            
+            // Aplicar imagens ao slider 3 (IMG) - usar apenas 3 imagens
+            const slider3Img1 = document.getElementById('slider-3-img-1');
+            const slider3Img2 = document.getElementById('slider-3-img-2');
+            const slider3Img3 = document.getElementById('slider-3-img-3');
+            
+            if (slider3Img1 && slider3Img2 && slider3Img3) {
+              slider3Img1.src = `/images/${grupo3[0]}`;
+              slider3Img2.src = `/images/${grupo3[1]}`;
+              slider3Img3.src = `/images/${grupo3[2]}`;
+            }
+            
+            // Função para alternar imagens com efeito fade
+            function alternarImagens(sliderId, tempoTransicao, totalImagens) {
+              let imagemAtual = 0;
+              
+              setInterval(() => {
+                const img1 = document.getElementById(`${sliderId}-img-1`);
+                const img2 = document.getElementById(`${sliderId}-img-2`);
+                const img3 = document.getElementById(`${sliderId}-img-3`);
+                
+                if (img1 && img2 && img3) {
+                  // Esconder todas as imagens
+                  img1.style.opacity = '0';
+                  img2.style.opacity = '0';
+                  img3.style.opacity = '0';
+                  
+                  // Mostrar a próxima imagem baseado no total disponível
+                  if (totalImagens === 4) {
+                    // Para sliders com 4 imagens, usar as 3 primeiras em loop
+                    if (imagemAtual === 0) {
+                      img1.style.opacity = '1';
+                      imagemAtual = 1;
+                    } else if (imagemAtual === 1) {
+                      img2.style.opacity = '1';
+                      imagemAtual = 2;
+                    } else {
+                      img3.style.opacity = '1';
+                      imagemAtual = 0;
+                    }
+                  } else {
+                    // Para slider com 3 imagens
+                    if (imagemAtual === 0) {
+                      img1.style.opacity = '1';
+                      imagemAtual = 1;
+                    } else if (imagemAtual === 1) {
+                      img2.style.opacity = '1';
+                      imagemAtual = 2;
+                    } else {
+                      img3.style.opacity = '1';
+                      imagemAtual = 0;
+                    }
+                  }
+                }
+              }, tempoTransicao);
+            }
+            
+            // Iniciar os sliders com tempos diferentes
+            alternarImagens('slider-1', 3000, 4); // 3 segundos, 4 imagens
+            alternarImagens('slider-2', 4000, 4); // 4 segundos, 4 imagens
+            alternarImagens('slider-3', 5000, 3); // 5 segundos, 3 imagens
+          });
+        </script>
     </section>
     
     
