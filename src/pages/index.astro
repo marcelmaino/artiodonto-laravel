@@ -89,7 +89,7 @@ import Layout from '../layouts/Layout.astro';
         cursor: col-resize;
         transform: translateX(-50%);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        transition: left 0.1s ease;
+        /* Removida a transição que causava atraso */
         /* Previne seleção do handle */
         user-select: none;
         -webkit-user-select: none;
@@ -1164,7 +1164,7 @@ import Layout from '../layouts/Layout.astro';
                 <!-- Indicadores -->
                 <div class="flex justify-center mb-6 fade-on-scroll opacity-0 hidden" data-fade-delay="500">
                     <div class="flex space-x-2">
-                        <button class="indicator w-3 h-3 rounded-full bg-white opacity-50 transition-opacity duration-300" id="antes-depois-indicator-0" data-slide="0"></button>
+                        <button class="indicator w-3 h-3 rounded-full bg-white transition-opacity duration-300" id="antes-depois-indicator-0" data-slide="0"></button>
                         <button class="indicator w-3 h-3 rounded-full bg-white opacity-50 transition-opacity duration-300" id="antes-depois-indicator-1" data-slide="1"></button>
                         <button class="indicator w-3 h-3 rounded-full bg-white opacity-50 transition-opacity duration-300" id="antes-depois-indicator-2" data-slide="2"></button>
                     </div>
@@ -1172,10 +1172,10 @@ import Layout from '../layouts/Layout.astro';
                 
                 <!-- Container do Slide -->
                 <div class="relative overflow-hidden bg-transparent fade-on-scroll opacity-0" data-fade-delay="600">
-                    <div class="antes-depois-slider-container flex transition-transform duration-500 ease-in-out bg-transparent">
+                    <div class="antes-depois-slider-container flex transition-transform duration-500 ease-in-out bg-transparent" style="width: 300%;">
                         
                         <!-- Slide 1 -->
-                        <div class="slide w-full flex-shrink-0 bg-transparent fade-on-scroll opacity-0" data-fade-delay="700">
+                        <div class="slide flex-shrink-0 bg-transparent fade-on-scroll opacity-0" data-fade-delay="700" style="width: 33.333333%;">
                             <div class="bg-white rounded-2xl overflow-hidden">
                                 <div class="grid md:grid-cols-2 gap-0">
                                     <!-- Comparador de Imagens -->
@@ -1220,13 +1220,103 @@ import Layout from '../layouts/Layout.astro';
                             </div>
                         </div>
                         
-     
+                        <!-- Slide 2 -->
+                        <div class="slide flex-shrink-0 bg-transparent fade-on-scroll opacity-0" data-fade-delay="700" style="width: 33.333333%;">
+                            <div class="bg-white rounded-2xl overflow-hidden">
+                                <div class="grid md:grid-cols-2 gap-0">
+                                    <!-- Comparador de Imagens -->
+                                    <div class="relative h-[96] md:h-[350px] p-3">
+                                        <div class="before-after-container h-64 md:h-[350px]" data-slider="1">
+                                            <img src="/images/antes01.jpg" alt="Antes" class="before-image">
+                                            <img src="/images/depois01.jpg" alt="Depois" class="after-image">
+                                            <div class="slider-handle"></div>
+                                        </div>
+                                        <div class="absolute top-4 left-4 bg-amber-800 bg-opacity-50 antialiased text-white px-3 py-1 rounded-full text-xs">ANTES</div>
+                                        <div class="absolute top-4 right-4 bg-teal-800 bg-opacity-50 text-white px-3 py-1 rounded-full text-xs">DEPOIS</div>
+                                    </div>
+                                    
+                                    <!-- Informações -->
+                                    <div class="p-8 flex flex-col justify-center h-full">
+                                        <div class="mb-6 flex-1">
+                                            <h3 class="text-2xl font-bold text-gray-700 mb-2">Tratamento de Clareamento</h3>
+                                            <div class="flex items-center space-x-4 text-gray-600 mb-4 text-sm">
+                                                <span class="flex items-center">
+                                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                                        <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                                    </svg>
+                                                    28 anos
+                                                </span>
+                                                <span class="flex items-center">
+                                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                                                    </svg>
+                                                    Feminino
+                                                </span>
+                                            </div>
+                                            <p class="text-gray-700 leading-relaxed text-sm">
+                                                "Estou impressionada com os resultados! O clareamento superou todas as minhas expectativas. 
+                                                Meus dentes ficaram muito mais brancos e naturais. A equipe foi extremamente profissional 
+                                                e cuidadosa durante todo o processo."
+                                            </p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="slide flex-shrink-0 bg-transparent fade-on-scroll opacity-0" data-fade-delay="700" style="width: 33.333333%;">
+                            <div class="bg-white rounded-2xl overflow-hidden">
+                                <div class="grid md:grid-cols-2 gap-0">
+                                    <!-- Comparador de Imagens -->
+                                    <div class="relative h-[96] md:h-[350px] p-3">
+                                        <div class="before-after-container h-64 md:h-[350px]" data-slider="2">
+                                            <img src="/images/antes02.jpg" alt="Antes" class="before-image">
+                                            <img src="/images/depois02.jpg" alt="Depois" class="after-image">
+                                            <div class="slider-handle"></div>
+                                        </div>
+                                        <div class="absolute top-4 left-4 bg-amber-800 bg-opacity-50 antialiased text-white px-3 py-1 rounded-full text-xs">ANTES</div>
+                                        <div class="absolute top-4 right-4 bg-teal-800 bg-opacity-50 text-white px-3 py-1 rounded-full text-xs">DEPOIS</div>
+                                    </div>
+                                    
+                                    <!-- Informações -->
+                                    <div class="p-8 flex flex-col justify-center h-full">
+                                        <div class="mb-6 flex-1">
+                                            <h3 class="text-2xl font-bold text-gray-700 mb-2">Tratamento de Clareamento</h3>
+                                            <div class="flex items-center space-x-4 text-gray-600 mb-4 text-sm">
+                                                <span class="flex items-center">
+                                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                                        <path fill-rule="evenodd" d="M.458 10C1.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                                    </svg>
+                                                    28 anos
+                                                </span>
+                                                <span class="flex items-center">
+                                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                                                    </svg>
+                                                    Feminino
+                                                </span>
+                                            </div>
+                                            <p class="text-gray-700 leading-relaxed text-sm">
+                                                "Estou impressionada com os resultados! O clareamento superou todas as minhas expectativas. 
+                                                Meus dentes ficaram muito mais brancos e naturais. A equipe foi extremamente profissional 
+                                                e cuidadosa durante todo o processo."
+                                            </p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
                         
                     </div>
                 </div>
                 
                 <!-- Controles de Navegação -->
-                <div class="flex justify-center mt-8 space-x-4 text-xs fade-on-scroll opacity-0 hidden" data-fade-delay="1000">
+                <div class="flex justify-center mt-8 space-x-4 text-xs fade-on-scroll" data-fade-delay="1000">
                     <button id="prevBtn" class="bg-teal-600 bg-opacity-20 hover:bg-opacity-30 text-white px-6 py-3 rounded-full transition-all duration-300 flex items-center space-x-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -2298,6 +2388,75 @@ document.addEventListener('DOMContentLoaded', function() {
     
     console.log('Slider de antes e depois inicializado com sucesso!');
 });
+
+// Script para controlar a navegação do slider de antes e depois
+document.addEventListener('DOMContentLoaded', function() {
+    const sliderContainer = document.querySelector('.antes-depois-slider-container');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const indicators = document.querySelectorAll('[id^="antes-depois-indicator"]');
+    
+    let currentSlideIndex = 0;
+    const totalSlides = slides.length;
+    
+            // Função para mostrar um slide específico
+        function showSlide(slideIndex) {
+            if (slideIndex < 0 || slideIndex >= totalSlides) return;
+            
+            // Atualiza o container com transform
+            // Como cada slide tem 33.333333% de largura, multiplicamos por 33.333333
+            const translateX = -slideIndex * 33.333333;
+            sliderContainer.style.transform = `translateX(${translateX}%)`;
+            
+            // Atualiza o slide ativo
+            currentSlideIndex = slideIndex;
+            
+            // Atualiza os indicadores
+            indicators.forEach((indicator, index) => {
+                if (index === slideIndex) {
+                    indicator.classList.remove('opacity-50');
+                    indicator.classList.add('bg-white');
+                } else {
+                    indicator.classList.add('opacity-50');
+                    indicator.classList.remove('bg-white');
+                }
+            });
+            
+            console.log(`Slide ${slideIndex + 1} ativo, translateX: ${translateX}%`);
+        }
+    
+    // Função para ir para o próximo slide
+    function nextSlide() {
+        const nextIndex = (currentSlideIndex + 1) % totalSlides;
+        showSlide(nextIndex);
+    }
+    
+    // Função para ir para o slide anterior
+    function prevSlide() {
+        const prevIndex = currentSlideIndex === 0 ? totalSlides - 1 : currentSlideIndex - 1;
+        showSlide(prevIndex);
+    }
+    
+    // Event listeners para os botões de navegação
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevSlide);
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextSlide);
+    }
+    
+    // Event listeners para os indicadores
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => showSlide(index));
+    });
+    
+    // Inicializa o primeiro slide
+    showSlide(0);
+    
+    console.log('Navegação do slider de antes e depois inicializada com sucesso!');
+});
 </script>
 
 <style>
@@ -2342,6 +2501,18 @@ document.addEventListener('DOMContentLoaded', function() {
 /* Estilos para o slider antes e depois */
 .antes-depois-slider-container {
     transition: transform 0.5s ease-in-out;
+    display: flex;
+    width: 300%; /* 3 slides * 100% */
+}
+
+.antes-depois-slider-container .slide {
+    width: 33.333333%; /* 100% / 3 slides */
+    flex-shrink: 0;
+}
+
+/* Container principal deve ter overflow hidden */
+.antes-depois-slider-container {
+    overflow: hidden;
 }
 
 .indicator {
