@@ -68,20 +68,21 @@ import Layout from '../layouts/Layout.astro';
 </script>
 
  <!-- Apresentação Arti Kids -->
- <section class="py-16 bg-[#e1e0e7] bg-[url('/images/fundo_kids.png')] bg-cover bg-center">
-     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+ <section class="relative">
+    <img src="/images/fundo_kids-ceu.png" alt="Nuvem decorativa" class="w-full h-auto">
+     <div class="max-w-7xl mx-auto absolute top-16 left-1/2 -translate-x-1/2 mix-blend-multiply">
+         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mix-blend-multiply">
              
-                 <div class="rounded-xl flex items-center justify-center overflow-hidden h-[60vh]">
+                 
                      <video 
-                         class="w-full h-full object-contain"
+                         class="w-full h-full object-contain mix-blend-multiply p-4"
                          src="/images/artito-final.mp4" 
                          autoplay 
                          loop 
                          muted 
                          playsinline
                      ></video>
-                 </div>
+                
 
              
              <!-- Texto Explicativo -->
@@ -118,7 +119,6 @@ import Layout from '../layouts/Layout.astro';
      </div>
      
  </section>
- <img src="/images/nuvem-artito.png" alt="Nuvem decorativa" class="w-full h-auto">
 
  <!-- Serviços Especiais para Crianças -->
  <section class="py-16 bg-gray-50">
