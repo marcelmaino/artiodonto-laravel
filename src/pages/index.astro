@@ -69,12 +69,12 @@ import Layout from '../layouts/Layout.astro';
     }
     
     .before-after-container img:first-child {
-        z-index: 1;
+        z-index: 2;
+        clip-path: polygon(0 0, var(--clip-position, 50%) 0, var(--clip-position, 50%) 100%, 0 100%);
     }
     
     .before-after-container img:last-child {
-        z-index: 2;
-        clip-path: polygon(0 0, var(--clip-position, 50%) 0, var(--clip-position, 50%) 100%, 0 100%);
+        z-index: 1;
     }
     
     .slider-handle {
@@ -1183,8 +1183,8 @@ import Layout from '../layouts/Layout.astro';
                                     <!-- Comparador de Imagens -->
                                     <div class="relative h-[96] md:h-[350px] p-3">
                                         <div class="before-after-container h-64 md:h-[350px]" data-slider="0">
-                                            <img src="/images/antes.jpg" alt="Antes" class="before-image">
-                                            <img src="/images/depois.jpg" alt="Depois" class="after-image">
+                                            <img src="/images/antes.jpg" alt="Depois" class="after-image">
+                                            <img src="/images/depois.jpg" alt="Antes" class="before-image">
                                             <div class="slider-handle"></div>
                                         </div>
                                         <div class="absolute top-4 left-4 bg-amber-800 bg-opacity-50 antialiased text-white px-3 py-1 rounded-full text-xs">ANTES</div>
@@ -1229,8 +1229,8 @@ import Layout from '../layouts/Layout.astro';
                                     <!-- Comparador de Imagens -->
                                     <div class="relative h-[96] md:h-[350px] p-3">
                                         <div class="before-after-container h-64 md:h-[350px]" data-slider="1">
-                                            <img src="/images/antes01.jpg" alt="Antes" class="before-image">
-                                            <img src="/images/depois01.jpg" alt="Depois" class="after-image">
+                                            <img src="/images/antes01.jpg" alt="Depois" class="after-image">
+                                            <img src="/images/depois01.jpg" alt="Antes" class="before-image">
                                             <div class="slider-handle"></div>
                                         </div>
                                         <div class="absolute top-4 left-4 bg-amber-800 bg-opacity-50 antialiased text-white px-3 py-1 rounded-full text-xs">ANTES</div>
@@ -1275,8 +1275,8 @@ import Layout from '../layouts/Layout.astro';
                                     <!-- Comparador de Imagens -->
                                     <div class="relative h-[96] md:h-[350px] p-3">
                                         <div class="before-after-container h-64 md:h-[350px]" data-slider="2">
-                                            <img src="/images/antes02.jpg" alt="Antes" class="before-image">
-                                            <img src="/images/depois02.jpg" alt="Depois" class="after-image">
+                                            <img src="/images/antes02.jpg" alt="Depois" class="after-image">
+                                            <img src="/images/depois02.jpg" alt="Antes" class="before-image">
                                             <div class="slider-handle"></div>
                                         </div>
                                         <div class="absolute top-4 left-4 bg-amber-800 bg-opacity-50 antialiased text-white px-3 py-1 rounded-full text-xs">ANTES</div>
@@ -1321,8 +1321,8 @@ import Layout from '../layouts/Layout.astro';
                                     <!-- Comparador de Imagens -->
                                     <div class="relative h-[96] md:h-[350px] p-3">
                                         <div class="before-after-container h-64 md:h-[350px]" data-slider="3">
-                                            <img src="/images/antes03.jpg" alt="Antes" class="before-image">
-                                            <img src="/images/depois03.jpg" alt="Depois" class="after-image">
+                                            <img src="/images/antes03.jpg" alt="Depois" class="after-image">
+                                            <img src="/images/depois03.jpg" alt="Antes" class="before-image">
                                             <div class="slider-handle"></div>
                                         </div>
                                         <div class="absolute top-4 left-4 bg-amber-800 bg-opacity-50 antialiased text-white px-3 py-1 rounded-full text-xs">ANTES</div>
@@ -1367,8 +1367,8 @@ import Layout from '../layouts/Layout.astro';
                                     <!-- Comparador de Imagens -->
                                     <div class="relative h-[96] md:h-[350px] p-3">
                                         <div class="before-after-container h-64 md:h-[350px]" data-slider="4">
-                                            <img src="/images/antes04.jpg" alt="Antes" class="before-image">
-                                            <img src="/images/depois04.jpg" alt="Depois" class="after-image">
+                                            <img src="/images/antes04.jpg" alt="Depois" class="after-image">
+                                            <img src="/images/depois04.jpg" alt="Antes" class="before-image">
                                             <div class="slider-handle"></div>
                                         </div>
                                         <div class="absolute top-4 left-4 bg-amber-800 bg-opacity-50 antialiased text-white px-3 py-1 rounded-full text-xs">ANTES</div>
@@ -2061,15 +2061,19 @@ import Layout from '../layouts/Layout.astro';
                 Confira as avaliações reais dos nossos pacientes no Google. Sua satisfação é nossa maior recompensa.
             </p>
         </div>
-
+        <style>
+            *{
+                /*outline: 1px solid red;*/
+            }
+           </style>
         <!-- Container das avaliações -->
-        <div class="max-w-6xl mx-auto">
+        <div class="container mx-auto">
             <!-- Grid de avaliações e fotos -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12 relative z-30">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12 relative z-30">
                 
                 <!-- Coluna 1: Avaliações -->
                 <div class="lg:col-span-1 space-y-6">
-                    
+                    <img src="/images/doutores.webp" alt="Depoimentos" class="w-full h-auto">
                 </div>
 
                 <!-- Coluna 2: Fotos -->
