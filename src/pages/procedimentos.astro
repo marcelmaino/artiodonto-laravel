@@ -4,6 +4,41 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Procedimentos - Arti Odontologia e Saúde" description="Conheça todos os procedimentos e tratamentos oferecidos" isInternalPage={true}>
 
+<style>
+    /* Estilo para limitar altura dos textos dos procedimentos a 8 linhas */
+    .procedimento-texto {
+        height: 12rem; /* Altura fixa equivalente a aproximadamente 8 linhas */
+        overflow-y: auto; /* Adiciona rolagem vertical quando necessário */
+        line-height: 1.5; /* Espaçamento entre linhas */
+        padding-right: 8px; /* Espaço para a barra de rolagem */
+    }
+    
+    /* Estilização da barra de rolagem */
+    .procedimento-texto::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .procedimento-texto::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 3px;
+    }
+    
+    .procedimento-texto::-webkit-scrollbar-thumb {
+        background: #14B8A6;
+        border-radius: 3px;
+    }
+    
+    .procedimento-texto::-webkit-scrollbar-thumb:hover {
+        background: #0D9488;
+    }
+    
+    /* Para Firefox */
+    .procedimento-texto {
+        scrollbar-width: thin;
+        scrollbar-color: #14B8A6 #f1f1f1;
+    }
+</style>
+
  <!-- Hero Section -->
  <section class="relative bg-[url('/images/fundo-titulo-clinica.jpg')] bg-cover bg-center text-white" style="font-family: 'Ubuntu', sans-serif;">
     <div class="absolute w-full h-full bg-teal-800/90"></div>
@@ -62,8 +97,8 @@ import Layout from '../layouts/Layout.astro';
                  <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
                      <div class="text-left px-4">
                          <h4 class="text-teal-800 font-bold text-lg mb-2">Odontopediatria</h4>
-                         <p class="text-teal-800/90 text-base leading-relaxed font-normal">
-                             A Arti Kids oferece consultas cheias de afeto e uma estrutura lúdica para cultivar uma relação positiva com a saúde bucal desde cedo. Cada criança é tratada de forma personalizada, para crescer com dentes fortes e um sorriso radiante! Atendimentos a bebês, crianças, pacientes especiais e gestantes.
+                         <p class="text-teal-800/90 text-sm leading-relaxed font-normal procedimento-texto">
+                            Com o projeto Arti Kids, cuidamos dos pequenos desde cedo, em um ambiente lúdico, cheio de afeto e pensado para que cada criança crie uma relação positiva com a saúde bucal. Atendemos bebês, crianças, gestantes e pacientes especiais, sempre de forma personalizada, para que cada sorriso cresça forte, saudável e feliz.
                          </p>
                      </div>
                  </div>
@@ -106,8 +141,8 @@ import Layout from '../layouts/Layout.astro';
                  <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
                      <div class="text-left px-4">
                          <h4 class="text-teal-800 font-bold text-lg mb-2">Clínica Geral</h4>
-                         <p class="text-teal-800/90 text-base leading-relaxed font-normal">
-                             Variedade de tratamentos e procedimentos para manter a saúde bucal, prevenir doenças e promover bem-estar. Inclui consultas de rotina, limpezas dentárias, diagnósticos e orientações preventivas para toda a família.
+                         <p class="text-teal-800/90 text-sm leading-relaxed font-normal procedimento-texto">
+                            Oferecemos os principais cuidados para manter a saúde bucal em equilíbrio: prevenimos doenças, tratamos alterações e acompanhamos de perto cada paciente, garantindo bem-estar contínuo.
                          </p>
                      </div>
                  </div>
@@ -150,8 +185,8 @@ import Layout from '../layouts/Layout.astro';
                  <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
                      <div class="text-left px-4">
                          <h4 class="text-orange-800 font-bold text-lg mb-2">Cirurgia Bucomaxilofacial</h4>
-                         <p class="text-orange-800/90 text-base leading-relaxed font-normal">
-                             Tratamento cirúrgico de doenças, lesões e malformações da boca, face e região craniofacial. Inclui extrações complexas, cirurgias de terceiros molares (sisos), correção de fraturas faciais, remoção de cistos e tumores benignos, e preparação para implantes dentários.
+                         <p class="text-orange-800/90 text-sm leading-relaxed font-normal procedimento-texto">
+                             Tratamento cirúrgico de doenças, lesões e malformações da boca, face e região craniofacial. Inclui extrações complexas, cirurgias de terceiros molares (sisos), correção de fraturas faciais, remoção de cistos e tumores benignos, e preparação para implantes dentários.Realizamos procedimentos cirúrgicos em boca, face e região craniofacial com técnica precisa, segurança e acompanhamento próximo em todas as etapas. Executamos procedimentos ambulatoriais como extrações de sisos, protocolos, implantes, enxertos, bem como procedimentos hospitalares complexos como cirurgias ortognáticas e reconstruções faciais. 
                          </p>
                      </div>
                  </div>
@@ -194,8 +229,8 @@ import Layout from '../layouts/Layout.astro';
                  <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
                      <div class="text-left px-4">
                          <h4 class="text-cyan-800 font-bold text-lg mb-2">Fisioterapia Cervicocraniomandibular</h4>
-                         <p class="text-cyan-800/90 text-base leading-relaxed font-normal">
-                             Diagnóstico e tratamento de disfunções musculoesqueléticas que afetam a região da cabeça, pescoço e mandíbula, assim como os pós operatórios dessas áreas. Indicada para DTM, bruxismo, dores de cabeça relacionadas à tensão muscular e reabilitação pós-cirúrgica.
+                         <p class="text-cyan-800/90 text-sm leading-relaxed font-normal procedimento-texto">
+                            Diagnosticamos e tratamos dores e disfunções musculoesqueléticas que envolvem cabeça, pescoço e mandíbula, além de auxiliar nos cuidados pós-operatórios dessas regiões.
                          </p>
                      </div>
                  </div>
@@ -238,8 +273,8 @@ import Layout from '../layouts/Layout.astro';
                  <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
                      <div class="text-left px-4">
                          <h4 class="text-purple-800 font-bold text-lg mb-2">Patologias Bucais</h4>
-                         <p class="text-purple-800/90 text-base leading-relaxed font-normal">
-                             A estomatologia busca a prevenção, diagnóstico e tratamento das doenças que afetam a cavidade oral e estruturas relacionadas. Inclui diagnóstico precoce de lesões, biópsias, tratamento de aftas recorrentes, herpes labial, candidíase oral e outras condições que afetam a mucosa bucal.
+                         <p class="text-purple-800/90 text-sm leading-relaxed font-normal procedimento-texto">
+                            Atuamos na prevenção, diagnóstico e tratamento das doenças que afetam a cavidade oral e estruturas relacionadas, sempre com atenção à saúde integral do paciente. Executamos procedimentos como biópsias e remoção de lesões.
                          </p>
                      </div>
                  </div>
@@ -282,8 +317,8 @@ import Layout from '../layouts/Layout.astro';
                  <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
                      <div class="text-left px-4">
                          <h4 class="text-green-800 font-bold text-lg mb-2">Laserterapia</h4>
-                         <p class="text-green-800/90 text-base leading-relaxed font-normal">
-                             Utilização de feixes de laser para regenerar tecidos, reduzir dor e inflamação e acelerar a cicatrização de aftas, extrações, implantes e herpes. Tratamento não invasivo que promove alívio imediato da dor, acelera a recuperação pós-operatória e melhora a qualidade de vida do paciente.
+                         <p class="text-green-800/90 text-sm leading-relaxed font-normal procedimento-texto">
+                            Utilizamos a laserterapia como recurso moderno para acelerar a cicatrização, reduzir dor e inflamação em diferentes situações, como aftas, implantes, extrações e herpes.
                          </p>
                      </div>
                  </div>
@@ -326,8 +361,8 @@ import Layout from '../layouts/Layout.astro';
                  <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
                      <div class="text-left px-4">
                          <h4 class="text-gray-800 font-bold text-lg mb-2">Reabilitação Oral</h4>
-                         <p class="text-gray-800/90 text-base leading-relaxed font-normal">
-                             Restauração da anatomia bucal, de forma a recuperar a saúde, a função e transformar a estética do sorriso. Utiliza-se uma abordagem multidisciplinar, combinando diferentes tratamentos como próteses, implantes, restaurações e cirurgias para devolver ao paciente a capacidade de mastigar, falar e sorrir com confiança.
+                            <p class="text-gray-800/90 text-sm leading-relaxed font-normal procedimento-texto">
+                             Restauração da anatomia bucal, de forma a recuperar a saúde, a função e transformar a estética do sorriso. Utiliza-se uma abordagem multidisciplinar, combinando diferentes tratamentos como próteses, implantes, restaurações e cirurgias para devolver ao paciente a capacidade de mastigar, falar e sorrir com confiança.Reconstruímos a saúde, a função e a estética do sorriso através de um olhar multidisciplinar. Planejamos cada caso de forma integrado, combinando próteses, implantes, ortodontia e periodontia para alcançar resultados completos.
                          </p>
                      </div>
                  </div>
@@ -370,8 +405,8 @@ import Layout from '../layouts/Layout.astro';
                  <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
                      <div class="text-left px-4">
                          <h4 class="text-lime-800 font-bold text-lg mb-2">Endodontia</h4>
-                         <p class="text-lime-800/90 text-base leading-relaxed font-normal">
-                             Tratamento de doenças e lesões da polpa dental e dos canais radiculares com o objetivo de cessar a dor e preservar os tecidos. Popularmente conhecido como "tratamento de canal", remove a infecção do interior do dente, alivia a dor intensa e permite a manutenção do dente natural na boca.
+                         <p class="text-lime-800/90 text-sm leading-relaxed font-normal procedimento-texto">
+                             Tratamento de doenças e lesões da polpa dental e dos canais radiculares com o objetivo de cessar a dor e preservar os tecidos. Popularmente conhecido como "tratamento de canal", remove a infecção do interior do dente, alivia a dor intensa e permite a manutenção do dente natural na boca.Tratamos a polpa e os canais dentários para cessar dores, controlar infecções e preservar ao máximo a estrutura natural dos dentes.
                          </p>
                      </div>
                  </div>
@@ -414,8 +449,8 @@ import Layout from '../layouts/Layout.astro';
                  <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
                      <div class="text-left px-4">
                          <h4 class="text-teal-800 font-bold text-lg mb-2">Ortodontia Fixa</h4>
-                         <p class="text-teal-800/90 text-base leading-relaxed font-normal">
-                             Correção da posição dos dentes, alinhamento de mordida e sua relação com as bases ósseas, através de aparelhos fixos, brackets e fios metálicos, para melhorar a estética e a função dental. Tratamento que proporciona um sorriso harmônico e melhora a mastigação, fonação e respiração.
+                         <p class="text-teal-800/90 text-sm leading-relaxed font-normal procedimento-texto">
+                             Correção da posição dos dentes, alinhamento de mordida e sua relação com as bases ósseas, através de aparelhos fixos, brackets e fios metálicos, para melhorar a estética e a função dental. Tratamento que proporciona um sorriso harmônico e melhora a mastigação, fonação e respiração.Corrigimos o posicionamento dos dentes e o alinhamento da mordida com aparelhos fixos. Nosso objetivo é unir estética e função em resultados previsíveis e duradouros.
                          </p>
                      </div>
                  </div>
@@ -458,8 +493,8 @@ import Layout from '../layouts/Layout.astro';
                  <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
                      <div class="text-left px-4">
                          <h4 class="text-orange-800 font-bold text-lg mb-2">Prótese Dentária</h4>
-                         <p class="text-orange-800/90 text-base leading-relaxed font-normal">
-                             Reabilitação de dentes perdidos ou danificados usando dispositivos protéticos, como facetas, coroas, próteses parciais removíveis, totais, fixas, sobre implantes. Restaura-se a função mastigatória, a estética do sorriso e a autoestima do paciente, devolvendo qualidade de vida e confiança.
+                         <p class="text-orange-800/90 text-sm leading-relaxed font-normal procedimento-texto">
+                             Reabilitação de dentes perdidos ou danificados usando dispositivos protéticos, como facetas, coroas, próteses parciais removíveis, totais, fixas, sobre implantes. Restaura-se a função mastigatória, a estética do sorriso e a autoestima do paciente, devolvendo qualidade de vida e confiança.Reabilitamos dentes perdidos ou comprometidos com soluções personalizadas como coroas, facetas e próteses fixas ou removíveis. Cada tratamento é planejado para devolver a mastigação, a estética e a autoconfiança.
                          </p>
                      </div>
                  </div>
@@ -502,8 +537,8 @@ import Layout from '../layouts/Layout.astro';
                  <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
                      <div class="text-left px-4">
                          <h4 class="text-green-800 font-bold text-lg mb-2">Implantodontia</h4>
-                         <p class="text-green-800/90 text-base leading-relaxed font-normal">
-                             Colocação de implantes dentários para substituir dentes perdidos, proporcionando uma base sólida para próteses. Promove a reabilitação oral, melhorando a função mastigatória e a estética do sorriso. Os implantes oferecem estabilidade e durabilidade superiores às próteses convencionais, preservando o osso alveolar.
+                            <p class="text-green-800/90 text-sm leading-relaxed font-normal procedimento-texto">
+                            Oferecemos implantes dentários modernos e seguros, devolvendo conforto, naturalidade e uma base sólida para próteses que reconstroem a função e o sorriso.
                          </p>
                      </div>
                  </div>
@@ -546,8 +581,8 @@ import Layout from '../layouts/Layout.astro';
                  <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
                      <div class="text-left px-4">
                          <h4 class="text-purple-800 font-bold text-lg mb-2">Alinhador Ortodôntico</h4>
-                         <p class="text-purple-800/90 text-base leading-relaxed font-normal">
-                             Correção da posição dos dentes através de dispositivos transparentes e removíveis discretos e confortáveis, substituindo os aparelhos ortodônticos tradicionais. Tratamento moderno que permite higienização adequada, maior conforto durante o uso e resultados estéticos superiores durante o período de tratamento.
+                         <p class="text-purple-800/90 text-sm leading-relaxed font-normal procedimento-texto">
+                             Correção da posição dos dentes através de dispositivos transparentes e removíveis discretos e confortáveis, substituindo os aparelhos ortodônticos tradicionais. Tratamento moderno que permite higienização adequada, maior conforto durante o uso e resultados estéticos superiores durante o período de tratamento.Disponibilizamos uma alternativa moderna e discreta aos aparelhos tradicionais: alinhadores transparentes, removíveis e confortáveis, que se adaptam à rotina do paciente. Somos uma clínica credenciada e certificada pela Invisalign, o sistema de alinhadores transparentes mais utilizado e conhecido em todo o mundo. 
                          </p>
                      </div>
                  </div>
@@ -590,8 +625,8 @@ import Layout from '../layouts/Layout.astro';
                  <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
                      <div class="text-left px-4">
                          <h4 class="text-gray-800 font-bold text-lg mb-2">Periodontia</h4>
-                         <p class="text-gray-800/90 text-base leading-relaxed font-normal">
-                             Prevenção, diagnóstico e tratamento de doenças das gengivas e dos tecidos de suporte dos dentes, como gengivite e periodontite. Tratamentos cirúrgicos para a melhora da estética gengival. Inclui limpezas profundas, raspagem, alisamento radicular e cirurgias gengivais para manter a saúde periodontal e prevenir a perda dentária.
+                         <p class="text-gray-800/90 text-sm leading-relaxed font-normal procedimento-texto">
+                            Cuidamos da saúde das gengivas e dos tecidos de suporte dos dentes, prevenindo e tratando doenças como gengivite e periodontite. Também realizamos procedimentos cirúrgicos estéticos gengivais que valorizam o sorriso.
                          </p>
                      </div>
                  </div>
@@ -634,8 +669,8 @@ import Layout from '../layouts/Layout.astro';
                  <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
                      <div class="text-left px-4">
                          <h4 class="text-lime-800 font-bold text-lg mb-2">Dentística Restauradora</h4>
-                         <p class="text-lime-800/90 text-base leading-relaxed font-normal">
-                             Devolução da estética e função dental, a partir de reparo e restauração de dentes danificados por fraturas, desgastes ou cáries. São utilizados materiais avançados como resinas e porcelanas para criar restaurações que imitam a aparência natural dos dentes, proporcionando resultados duradouros e esteticamente superiores.
+                                <p class="text-lime-800/90 text-sm leading-relaxed font-normal procedimento-texto">
+                             Devolução da estética e função dental, a partir de reparo e restauração de dentes danificados por fraturas, desgastes ou cáries. São utilizados materiais avançados como resinas e porcelanas para criar restaurações que imitam a aparência natural dos dentes, proporcionando resultados duradouros e esteticamente superiores.Recuperamos dentes danificados por fraturas, cáries ou desgastes utilizando materiais modernos como resinas e porcelanas. Nosso objetivo é devolver a estética, a função e a saúde de forma natural e duradoura. Somos referência regional em reanatomizações estéticas em resina composta, e restaurações de altíssima complexidade. 
                          </p>
                      </div>
                  </div>
@@ -679,8 +714,8 @@ import Layout from '../layouts/Layout.astro';
                 <div class=" inset-0 flex items-center justify-center z-35 transition-opacity duration-500 mt-10">
                     <div class="text-left px-4">
                         <h4 class="text-teal-800 font-bold text-lg mb-2">Facetas dentárias</h4>
-                        <p class="text-teal-800/90 text-base leading-relaxed font-normal">
-                            A estomatologia busca a prevenção, diagnóstico e tratamento das doenças que afetam a cavidade oral e estruturas relacionadas. Inclui diagnóstico precoce de lesões, biópsias, tratamento de aftas recorrentes, herpes labial, candidíase oral e outras condições que afetam a mucosa bucal.
+                        <p class="text-teal-800/90 text-sm leading-relaxed font-normal procedimento-texto">
+                            Proporcionamos sorrisos mais harmônicos e naturais com facetas em resina ou porcelana. Cada caso é planejado com atenção aos detalhes, buscando equilíbrio entre estética, função e a individualidade de cada paciente.
                         </p>
                     </div>
                 </div>
