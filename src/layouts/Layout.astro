@@ -417,11 +417,222 @@ const { title, description = 'Clínica odontológica especializada em tratamento
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
     }
+    
+    /* Estilos para o popup de cookies */
+    .cookie-popup {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        max-width: 400px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(13, 148, 136, 0.2);
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        z-index: 9999;
+        transform: translateY(100px);
+        opacity: 0;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+    .cookie-popup.show {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    .cookie-popup .cookie-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .cookie-popup .cookie-icon {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        background: #0d9488;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 14px;
+        margin-top: 2px;
+    }
+    
+    .cookie-popup .cookie-text {
+        flex: 1;
+        color: #374151;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .cookie-popup .cookie-text strong {
+        color: #0d9488;
+        font-weight: 600;
+    }
+    
+    .cookie-popup .cookie-actions {
+        display: flex;
+        gap: 8px;
+        margin-top: 12px;
+        justify-content: flex-end;
+    }
+    
+    .cookie-popup .cookie-btn {
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border: none;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+    .cookie-popup .cookie-btn-accept {
+        background: #0d9488;
+        color: white;
+    }
+    
+    .cookie-popup .cookie-btn-accept:hover {
+        background: #0f766e;
+        transform: translateY(-1px);
+    }
+    
+    .cookie-popup .cookie-btn-decline {
+        background: transparent;
+        color: #6b7280;
+        border: 1px solid #d1d5db;
+    }
+    
+    .cookie-popup .cookie-btn-decline:hover {
+        background: #f9fafb;
+        color: #374151;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 640px) {
+        .cookie-popup {
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            padding: 16px;
+        }
+        
+        .cookie-popup .cookie-content {
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .cookie-popup .cookie-actions {
+            justify-content: stretch;
+        }
+        
+        .cookie-popup .cookie-btn {
+            flex: 1;
+        }
+    }
 </style>
 
 
 
 
+
+<!-- Popup de Cookies -->
+<div id="cookie-popup" class="cookie-popup">
+    <div class="cookie-content">
+        <div class="cookie-icon">🍪</div>
+        <div class="cookie-text">
+            Utilizamos <strong>cookies</strong> para melhorar sua experiência de navegação e personalizar conteúdo. 
+            Ao continuar navegando, você concorda com nossa política de cookies.
+        </div>
+    </div>
+    <div class="cookie-actions">
+        <button class="cookie-btn cookie-btn-decline" id="decline-cookies">
+            Recusar
+        </button>
+        <button class="cookie-btn cookie-btn-accept" id="accept-cookies">
+            Aceitar
+        </button>
+    </div>
+</div>
+
+<script>
+    // Função para verificar se o usuário já aceitou os cookies
+    function checkCookieConsent() {
+        const consent = localStorage.getItem('cookieConsent');
+        return consent === 'accepted' || consent === 'declined';
+    }
+    
+    // Função para mostrar o popup de cookies
+    function showCookiePopup() {
+        const popup = document.getElementById('cookie-popup');
+        if (popup && !checkCookieConsent()) {
+            setTimeout(() => {
+                popup.classList.add('show');
+            }, 1000); // Mostra após 1 segundo
+        }
+    }
+    
+    // Função para aceitar cookies
+    function acceptCookies() {
+        console.log('Aceitando cookies...');
+        localStorage.setItem('cookieConsent', 'accepted');
+        hideCookiePopup();
+        
+        // Aqui você pode adicionar código para inicializar analytics, etc.
+        console.log('Cookies aceitos pelo usuário');
+    }
+    
+    // Função para recusar cookies
+    function declineCookies() {
+        console.log('Recusando cookies...');
+        localStorage.setItem('cookieConsent', 'declined');
+        hideCookiePopup();
+        
+        // Aqui você pode adicionar código para desabilitar analytics, etc.
+        console.log('Cookies recusados pelo usuário');
+    }
+    
+    // Função para esconder o popup
+    function hideCookiePopup() {
+        console.log('Escondendo popup...');
+        const popup = document.getElementById('cookie-popup');
+        if (popup) {
+            popup.classList.remove('show');
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 400);
+        }
+    }
+    
+    // Inicializa o popup quando a página carrega
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM carregado, inicializando popup de cookies...');
+        
+        // Adiciona event listeners aos botões
+        const acceptBtn = document.getElementById('accept-cookies');
+        const declineBtn = document.getElementById('decline-cookies');
+        
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', acceptCookies);
+            console.log('Event listener adicionado ao botão aceitar');
+        }
+        
+        if (declineBtn) {
+            declineBtn.addEventListener('click', declineCookies);
+            console.log('Event listener adicionado ao botão recusar');
+        }
+        
+        // Mostra o popup se necessário
+        showCookiePopup();
+    });
+</script>
 
 </body>
 </html>
