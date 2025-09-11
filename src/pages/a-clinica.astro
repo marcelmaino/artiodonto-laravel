@@ -86,7 +86,7 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="A Clinica - Arti Odontologia e Saúde" description="Conheça nossa estrutura física, nossa equipe especializada e nossas instalações modernas dedicadas ao cuidado do seu sorriso." isInternalPage={true}>
 
  <!-- Hero Section -->
- <section class="relative bg-[url('/images/fundo-titulo-clinica.jpg')] bg-cover bg-center text-white" style="font-family: 'Ubuntu', sans-serif;">
+ <section class="relative bg-[url('/images/fundo-titulo-clinica.webp')] bg-cover bg-center text-white" style="font-family: 'Ubuntu', sans-serif;">
     <div class="absolute w-full h-full bg-teal-800/90"></div>
      <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
          <div class="text-center">
@@ -102,7 +102,7 @@ import Layout from '../layouts/Layout.astro';
 
 
     <!-- Nossa História -->
-    <section class="py-16 bg-white bg-[url('/images/fundo_divisoria_branca.png')] bg-cover bg-center">
+    <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
@@ -128,22 +128,22 @@ import Layout from '../layouts/Layout.astro';
                     <div class="swiper clinica-slider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="/images/empresa/empresa01.jpg" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
+                                <img src="/images/empresa/empresa01.webp" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
                             </div>
                             <div class="swiper-slide">
-                                <img src="/images/empresa/empresa02.jpg" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
+                                <img src="/images/empresa/empresa02.webp" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
                             </div>
                             <div class="swiper-slide">
-                                <img src="/images/empresa/empresa03.jpg" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
+                                <img src="/images/empresa/empresa03.webp" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
                             </div>
                             <div class="swiper-slide">
-                                <img src="/images/empresa/empresa04.jpg" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
+                                <img src="/images/empresa/empresa04.webp" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
                             </div>
                             <div class="swiper-slide">
-                                <img src="/images/empresa/empresa05.jpg" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
+                                <img src="/images/empresa/empresa05.webp" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
                             </div>
                             <div class="swiper-slide">
-                                <img src="/images/empresa/empresa06.jpg" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
+                                <img src="/images/empresa/empresa06.webp" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
                             </div>
                         </div>
                         
@@ -172,7 +172,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <!-- Nossa Missão, Visão e Valores -->
-    <section class="py-16 bg-gray-50 bg-[url('/images/fundo-pagina-clinica.png')] bg-cover bg-center hidden">
+    <section class="py-16 bg-gray-50 bg-[url('/images/fundo-pagina-clinica.webp')] bg-cover bg-center hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -228,7 +228,9 @@ import Layout from '../layouts/Layout.astro';
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="text-center group px-10">
                     <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
-                        <div class="text-3xl">🛋️</div>
+                        <div class="text-3xl">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600" xmlns="http://www.w3.org/2000/svg"><path d='M7.5 18v2m9-2v2M4.8 9.844C3.9 9.864 3 10.271 3 11v4c0 1.657 1.209 3 2.7 3h12.6c1.491 0 2.7-1.343 2.7-3v-4c0-.812-.9-1.176-1.8-1.156m-14.4 0c.9-.02 1.8.344 1.8 1.156 0 1.363.225 3 2 3h6.8c1.775 0 2-1.637 2-3 0-.73.9-1.135 1.8-1.156m-14.4 0V7c0-1.657 1.209-3 2.7-3h9c1.491 0 2.7 1.343 2.7 3v2.844'/></svg>
+                        </div>
                     </div>
                     <h3 class="text-lg font-semibold text-gray-900 mb-2">Sala de Espera</h3>
                     <p class="text-gray-600">Ambiente confortável com TV e Wi-Fi gratuito</p>
@@ -237,7 +239,9 @@ import Layout from '../layouts/Layout.astro';
                 
                 <div class="text-center group px-10">
                     <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
-                        <div class="text-3xl">♿</div>
+                        <div class="text-3xl">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" class="text-teal-600"><path d='M14.449 16.4A4.802 4.802 0 0 1 5 15.2a4.8 4.8 0 0 1 2.8-4.365'/><path d='m9.8 7.2.695 6.258a1 1 0 0 0 1.051.888l5.044-.288a1 1 0 0 1 1.056.953l.11 2.434a1 1 0 0 0 1 .955H19'/><path d='M11.2 5.6a1.6 1.6 0 1 1-3.2 0 1.6 1.6 0 0 1 3.2 0m1.55 4.8h3'/></svg>
+                        </div>
                     </div>
                     <h3 class="text-lg font-semibold text-gray-900 mb-2">Acessibilidade </h3>
                     <p class="text-gray-600">Instalações adaptadas para pessoas com mobilidade reduzida</p>
@@ -245,7 +249,9 @@ import Layout from '../layouts/Layout.astro';
                 
                 <div class="text-center group px-10">
                     <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
-                        <div class="text-3xl">🔒</div>
+                        <div class="text-3xl">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" class="text-teal-600"><path d='M8 10V8c0-2.761 1.239-5 4-5s4 2.239 4 5v2M3.5 17.8v-4.6c0-1.12 0-1.68.218-2.107a2 2 0 0 1 .874-.875c.428-.217.988-.217 2.108-.217h10.6c1.12 0 1.68 0 2.108.217a2 2 0 0 1 .874.874c.218.428.218.988.218 2.108v4.6c0 1.12 0 1.68-.218 2.108a2 2 0 0 1-.874.874C18.98 21 18.42 21 17.3 21H6.7c-1.12 0-1.68 0-2.108-.218a2 2 0 0 1-.874-.874C3.5 19.481 3.5 18.921 3.5 17.8'/></svg>
+                        </div>
                     </div>
                     <h3 class="text-lg font-semibold text-gray-900 mb-2">Segurança</h3>
                     <p class="text-gray-600">Sistema de monitoramento e controle de acesso 24 horas</p>
