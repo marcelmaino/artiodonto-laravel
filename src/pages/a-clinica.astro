@@ -1,6 +1,80 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
+
+<!-- CSS do Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- JavaScript do Swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<style>
+    /* Estilos personalizados para o slider da clínica */
+    .clinica-slider {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.5rem;
+    }
+    
+    .clinica-slider .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .clinica-slider .swiper-button-prev,
+    .clinica-slider .swiper-button-next {
+        color: #0d9488 !important;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-top: -20px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .clinica-slider .swiper-button-prev:hover,
+    .clinica-slider .swiper-button-next:hover {
+        background: rgba(255, 255, 255, 1);
+        transform: scale(1.1);
+    }
+    
+    .clinica-slider .swiper-button-prev:after,
+    .clinica-slider .swiper-button-next:after {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    .clinica-slider .swiper-pagination-bullet {
+        background: #0d9488;
+        opacity: 0.5;
+        width: 12px;
+        height: 12px;
+        margin: 0 4px;
+    }
+    
+    .clinica-slider .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: #0d9488;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .clinica-slider .swiper-button-prev,
+        .clinica-slider .swiper-button-next {
+            width: 32px;
+            height: 32px;
+            margin-top: -16px;
+        }
+        
+        .clinica-slider .swiper-button-prev:after,
+        .clinica-slider .swiper-button-next:after {
+            font-size: 12px;
+        }
+    }
+</style>
+
 <!-- 
     Ajuste o caminho das imagens para uso no Astro.
     Em Astro, utilize o import.meta.env.BASE_URL ou o helper Astro.assets, 
@@ -36,29 +110,60 @@ import Layout from '../layouts/Layout.astro';
                         Nossa História
                     </h2>
                     <p class="text-lg text-gray-600 mb-6">
-                        A Arti Odonto nasceu da paixão por cuidar dos sorrisos das pessoas. Fundada em 2010, nossa clínica tem como missão proporcionar tratamentos odontológicos de excelência, combinando tecnologia de ponta com um atendimento humanizado e personalizado.
+                        A Arti Odonto nasceu em 2021 com a missão de transformar o cuidado com os sorrisos, unindo tecnologia, acolhimento e excelência. Desde o início, contamos com profissionais de ampla experiência e dedicação, que somam anos de trajetória e conhecimento em diversas áreas da odontologia.
                     </p>
                     <p class="text-lg text-gray-600 mb-6">
-                        Ao longo dos anos, construímos uma reputação sólida baseada na qualidade dos nossos serviços, na dedicação da nossa equipe e no compromisso com a satisfação dos nossos pacientes.
+                        Nosso propósito é oferecer um atendimento humano e personalizado, no qual cada paciente é acolhido com atenção, escuta e cuidado em cada detalhe. Mais do que procedimentos, entregamos saúde, autoestima e qualidade de vida.
                     </p>
                     <p class="text-lg text-gray-600">
-                        Hoje, somos referência em odontologia na região, oferecendo tratamentos modernos e eficazes para toda a família, desde os primeiros dentes até a terceira idade.
+                        Hoje, somos referência em cuidado odontológico para toda a família, acompanhando cada fase da vida, dos primeiros dentes à maturidade, sempre com a mesma paixão e compromisso.
                     </p>
                 </div>
                 <div class="bg-gray-100 rounded-2xl p-8">
-                    <div class="text-center">
-                        <div class="text-6xl mb-4">🏥</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Mais de 10 anos de experiência</h3>
-                        <div class="grid grid-cols-2 gap-4 text-center">
-                            <div>
-                                <div class="text-3xl font-bold text-teal-600">5000+</div>
-                                <div class="text-gray-600">Pacientes atendidos</div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Nossas Instalações</h3>
+                    </div>
+                    
+                    <!-- Slider de Imagens da Clínica -->
+                    <div class="swiper clinica-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="/images/empresa/empresa01.jpg" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
                             </div>
-                            <div>
-                                <div class="text-3xl font-bold text-teal-600">15+</div>
-                                <div class="text-gray-600">Especialidades</div>
+                            <div class="swiper-slide">
+                                <img src="/images/empresa/empresa02.jpg" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
                             </div>
-                           
+                            <div class="swiper-slide">
+                                <img src="/images/empresa/empresa03.jpg" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/images/empresa/empresa04.jpg" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/images/empresa/empresa05.jpg" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/images/empresa/empresa06.jpg" alt="Instalações da clínica" class="w-full h-[45vh] object-cover rounded-lg shadow-md">
+                            </div>
+                        </div>
+                        
+                        <!-- Navegação -->
+                        <div class="swiper-button-prev !text-teal-600 !text-2xl"></div>
+                        <div class="swiper-button-next !text-teal-600 !text-2xl"></div>
+                        
+                        <!-- Indicadores -->
+                        <div class="swiper-pagination !bottom-0"></div>
+                    </div>
+                    
+                    <!-- Estatísticas -->
+                    <div class="grid grid-cols-2 gap-4 text-center mt-6 hidden">
+                        <div>
+                            <div class="text-3xl font-bold text-teal-600">5000+</div>
+                            <div class="text-gray-600">Pacientes atendidos</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-teal-600">15+</div>
+                            <div class="text-gray-600">Especialidades</div>
                         </div>
                     </div>
                 </div>
@@ -67,7 +172,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <!-- Nossa Missão, Visão e Valores -->
-    <section class="py-16 bg-gray-50 bg-[url('/images/fundo-pagina-clinica.png')] bg-cover bg-center">
+    <section class="py-16 bg-gray-50 bg-[url('/images/fundo-pagina-clinica.png')] bg-cover bg-center hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -134,7 +239,7 @@ import Layout from '../layouts/Layout.astro';
                     <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
                         <div class="text-3xl">♿</div>
                     </div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Acessibilidade</h3>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Acessibilidade </h3>
                     <p class="text-gray-600">Instalações adaptadas para pessoas com mobilidade reduzida</p>
                 </div>
                 
@@ -169,7 +274,110 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </section>
 
-
-
+    <!-- Script para inicializar o slider da clínica -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM carregado, iniciando carregamento do Swiper...');
+            
+            // Função para inicializar o slider
+            function initClinicaSlider() {
+                console.log('Inicializando slider da clínica...');
+                
+                // Verifica se o elemento existe
+                const sliderElement = document.querySelector('.clinica-slider');
+                if (!sliderElement) {
+                    console.error('Elemento .clinica-slider não encontrado!');
+                    return;
+                }
+                
+                console.log('Elemento do slider encontrado:', sliderElement);
+                
+                // Inicializa o Swiper para o slider da clínica
+                // @ts-ignore
+                const swiperClinica = new Swiper(".clinica-slider", {
+                    // Configurações básicas
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    loop: true,
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    },
+                    
+                    // Navegação
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    
+                    // Paginação
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                        dynamicBullets: true
+                    },
+                    
+                    // Efeitos
+                    effect: 'slide',
+                    speed: 600,
+                    
+                    // Responsividade
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 1,
+                            spaceBetween: 30,
+                        },
+                        1024: {
+                            slidesPerView: 1,
+                            spaceBetween: 40,
+                        }
+                    },
+                    
+                    // Callbacks
+                    on: {
+                        init: function () {
+                            console.log('Slider da clínica inicializado com sucesso!');
+                        },
+                        slideChange: function (swiper: any) {
+                            console.log('Slide alterado para:', swiper.activeIndex);
+                        }
+                    }
+                });
+                
+                console.log('Slider da clínica criado:', swiperClinica);
+            }
+            
+            // Carrega o Swiper dinamicamente se não estiver disponível
+            if (typeof (window as any).Swiper === 'undefined') {
+                console.log('Swiper não está carregado, carregando dinamicamente...');
+                
+                // Carrega o CSS do Swiper
+                const swiperCSS = document.createElement('link');
+                swiperCSS.rel = 'stylesheet';
+                swiperCSS.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+                document.head.appendChild(swiperCSS);
+                
+                // Carrega o JavaScript do Swiper
+                const swiperScript = document.createElement('script');
+                swiperScript.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+                swiperScript.onload = function() {
+                    console.log('Script do Swiper carregado com sucesso!');
+                    initClinicaSlider();
+                };
+                swiperScript.onerror = function() {
+                    console.error('Erro ao carregar o script do Swiper');
+                };
+                document.head.appendChild(swiperScript);
+            } else {
+                console.log('Swiper já está disponível!');
+                initClinicaSlider();
+            }
+        });
+    </script>
 
 </Layout>
