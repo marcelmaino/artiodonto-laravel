@@ -2212,7 +2212,7 @@ import Layout from '../layouts/Layout.astro';
             }
            </style>
         <!-- Container das avaliações -->
-        <div class="container mx-auto">
+        <div class="max-w-7xl mx-auto">
             <!-- Grid de avaliações e fotos -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12 relative z-30">
                 
@@ -2248,7 +2248,7 @@ import Layout from '../layouts/Layout.astro';
                             })
                             .then(reviews => {
                               // Limpa a mensagem "Carregando..."
-                              container.innerHTML = '<h2 class="text-xl font-semibold text-teal-700 mb-6 text-center">O que nossos clientes dizem</h2>'; 
+                              container.innerHTML = '<h2 class="text-xl font-semibold text-teal-700 mb-6 text-center"></h2>'; 
                       
                               if (reviews && reviews.length > 0) {
                                 // Seleciona os 20 últimos depoimentos
@@ -2323,7 +2323,7 @@ import Layout from '../layouts/Layout.astro';
             <!-- Estatísticas -->
             <div class="bg-white rounded-2xl p-8 shadow-lg fade-on-scroll opacity-0 relative" data-fade-delay="1000">
                 
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center z-30 relative">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center z-30 relative">
                     <div>
                         <div class="text-3xl font-bold text-teal-600 mb-2">5</div>
                         <div class="flex justify-center text-yellow-400 text-lg mb-2">
@@ -2335,16 +2335,13 @@ import Layout from '../layouts/Layout.astro';
                         </div>
                         <p class="text-gray-600 text-sm">Avaliação média</p>
                     </div>
-                    <div>
-                        <div class="text-3xl font-bold text-teal-600 mb-2">500+</div>
-                        <p class="text-gray-600 text-sm">Avaliações</p>
-                    </div>
+                    
                     <div>
                         <div class="text-3xl font-bold text-teal-600 mb-2">100%</div>
                         <p class="text-gray-600 text-sm">Satisfação</p>
                     </div>
                     <div>
-                        <div class="text-3xl font-bold text-teal-600 mb-2">12</div>
+                        <div class="text-3xl font-bold text-teal-600 mb-2">20</div>
                         <p class="text-gray-600 text-sm">Anos de experiência</p>
                     </div>
                 </div>
